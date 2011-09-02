@@ -27,7 +27,7 @@
  {:name "test.generative"
   :owners []}
  {:name "tools.cli"
-  :owners []}
+  :owners ["garethjones"]}
  {:name "tools.logging"
   :owners []}
  {:name "tools.macro"
