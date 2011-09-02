@@ -25,12 +25,12 @@
 (defn active-clojures []
   ["1.2.0" "1.2.1" "1.3.0-beta2"])
 
-(defn contrib-libs-file []
-  (io/file "projects.txt"))
+(defn contrib-libs-url []
+  (io/resource "libs.clj"))
 
 (defn contrib-libs []
-  (with-open [r (io/reader (contrib-libs-file))]
-    (doall (map #(second (.split % "/")) (line-seq r)))))
+  (with-open [r (java.io.PushbackReader. (io/reader (contrib-libs-url)))]
+    (read r)))
 
 (defn template [name]
   (ST. (slurp (io/resource (str "templates/" name ".st")))
@@ -54,24 +54,28 @@
       (.add t (name k) (prepare-template-arg v)))
     (.render t)))
 
+(defn release-job-defaults []
+  {:jdk (default-jdk)})
+
 (defn release-job-config [lib]
   (render-template "release_job"
-                   {:name lib
-                    :jdk (default-jdk)}))
+                   (merge (release-job-defaults) lib)))
+
+(defn matrix-job-defaults []
+  {:jdks (jdk-names)
+   :clojures (active-clojures)})
 
 (defn matrix-job-config [lib]
   (render-template "matrix_job"
-                   {:name lib
-                    :jdks (jdk-names)
-                    :clojures (active-clojures)}))
+                   (merge (matrix-job-defaults) lib)))
 
 (defn write-release-job [lib]
-  (.mkdirs (job-dir lib))
-  (spit (job-config-file lib)
+  (.mkdirs (job-dir (:name lib)))
+  (spit (job-config-file (:name lib))
         (release-job-config lib)))
 
 (defn write-matrix-job [lib]
-  (let [jobname (str lib "-test-matrix")]
+  (let [jobname (str (:name lib) "-test-matrix")]
     (.mkdirs (job-dir jobname))
     (spit (job-config-file jobname)
           (matrix-job-config lib))))

@@ -9,7 +9,17 @@
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <hudson.security.AuthorizationMatrixProperty>
+      $owners:{ name |<permission>hudson.model.Item.Read:$name$</permission>
+<permission>hudson.model.Run.Delete:$name$</permission>
+<permission>hudson.model.Run.Update:$name$</permission>
+<permission>hudson.model.Item.Workspace:$name$</permission>
+<permission>hudson.model.Item.Build:$name$</permission>
+<permission>hudson.model.Item.Release:$name$</permission>};
+       separator="\n"$
+    </hudson.security.AuthorizationMatrixProperty>
+  </properties>
   <scm class="hudson.plugins.git.GitSCM">
     <configVersion>1</configVersion>
     <remoteRepositories>
