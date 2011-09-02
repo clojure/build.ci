@@ -21,32 +21,32 @@
 &lt;p&gt;All projects build on Sun/Oracle JDK 1.5 unless specified otherwise.&lt;/p&gt;</systemMessage>
   <jdks>
     <jdk>
-      <name>Sun JDK 1.6.0_20</name>
-      <home>/usr/java/jdk1.6.0_20</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>Sun JDK 1.5.0_22</name>
+      <name>Sun JDK 1.5</name>
       <home>/var/lib/hudson/tools/Sun_JDK_1.5.0_22</home>
       <properties/>
     </jdk>
     <jdk>
-      <name>IBM Java SDK 5.0-12.3</name>
+      <name>Sun JDK 1.6</name>
+      <home>/usr/java/jdk1.6.0_20</home>
+      <properties/>
+    </jdk>
+    <jdk>
+      <name>IBM JDK 5</name>
       <home>/usr/java/ibm-java2-x86_64-50</home>
       <properties/>
     </jdk>
     <jdk>
-      <name>OpenJDK 1.6.0.0-1.16.b17.el5</name>
+      <name>OpenJDK 1.6</name>
       <home>/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64</home>
       <properties/>
     </jdk>
     <jdk>
-      <name>JRockit JDK 1.5.0_28-R28.1.3-4.0.1</name>
+      <name>JRockit 1.5</name>
       <home>/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1</home>
       <properties/>
     </jdk>
     <jdk>
-      <name>JRockit JDK 1.6.0_24-R28.1.3-4.0.1</name>
+      <name>JRockit 1.6</name>
       <home>/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1</home>
       <properties/>
     </jdk>
