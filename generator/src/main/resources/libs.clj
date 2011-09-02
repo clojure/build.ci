@@ -16,8 +16,6 @@
   :owners []}
  {:name "data.zip"
   :owners []}
- {:name "io.incubator"
-  :owners []}
  {:name "java.classpath"
   :owners []}
  {:name "java.data"
