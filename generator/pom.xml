@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>build.ci.generator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Continuous-integration build generator scripts</name>
+
+  <parent>
+    <groupId>org.clojure</groupId>
+    <artifactId>pom.contrib</artifactId>
+    <version>0.0.24</version>
+  </parent>
+
+  <developers>
+    <developer>
+      <name>Stuart Sierra</name>
+      <url>http://stuartsierra.com/</url>
+      <email>mail@stuartsierra.com</email>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:clojure/build.ci.git</connection>
+    <developerConnection>scm:git:git@github.com:clojure/build.ci.git</developerConnection>
+    <url>git@github.com:clojure/build.ci.git</url>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>data.zip</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>stringtemplate</artifactId>
+      <version>4.0.2</version>
+    </dependency>
+  </dependencies>
+</project>
