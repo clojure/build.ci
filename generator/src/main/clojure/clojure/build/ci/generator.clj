@@ -17,8 +17,13 @@
 
 (defn ci-config-zipper [] (zip/xml-zip (xml/parse (ci-config))))
 
+(defn remove-jrockit [coll]
+  (remove #(re-find #"(?i)jrockit" %) coll))
+
 (defn jdk-names []
-  (vec (dzx/xml-> (ci-config-zipper) :jdks :jdk :name dzx/text)))
+  (vec (remove-jrockit
+        (dzx/xml-> (ci-config-zipper)
+                   :jdks :jdk :name dzx/text))))
 
 (defn default-jdk [] (first (jdk-names)))
 
