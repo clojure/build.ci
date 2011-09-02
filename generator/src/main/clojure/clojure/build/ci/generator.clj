@@ -85,6 +85,9 @@
     (write-release-job lib)
     (write-matrix-job lib)))
 
+(defn -main []
+  (write-job-files))
+
 ;; Local Variables:
 ;; eval: (setq inferior-lisp-program (concat default-directory "../../../../../script/repl.sh"))
 ;; End:
