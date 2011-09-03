@@ -4,6 +4,8 @@
   :owners []}
  {:name "core.logic"
   :owners ["davidnolen"]}
+ {:name "core.match"
+  :owners ["davidnolen"]}
  {:name "core.unify"
   :owners []}
  {:name "data.csv"
