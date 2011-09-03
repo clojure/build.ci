@@ -31,6 +31,11 @@
       <properties/>
     </jdk>
     <jdk>
+      <name>Oracle JDK 1.7</name>
+      <home>/usr/java/jdk1.7.0-b147</home>
+      <properties/>
+    </jdk>
+    <jdk>
       <name>IBM JDK 5</name>
       <home>/usr/java/ibm-java2-x86_64-50</home>
       <properties/>
