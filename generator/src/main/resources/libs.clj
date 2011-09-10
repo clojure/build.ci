@@ -14,6 +14,8 @@
   :owners ["Chouser"]}
  {:name "data.json"
   :owners ["stuartsierra"]}
+ {:name "data.priority-map"
+  :owners ["markengelberg"]}
  {:name "data.xml"
   :owners []}
  {:name "data.zip"
@@ -26,6 +28,10 @@
   :owners ["seancorfield"]}
  {:name "java.jmx"
   :owners []}
+ {:name "math.combinatorics"
+  :owners ["markengelberg"]}
+ {:name "math.numeric-tower"
+  :owners ["markengelberg"]}
  {:name "test.generative"
   :owners []}
  {:name "tools.cli"
