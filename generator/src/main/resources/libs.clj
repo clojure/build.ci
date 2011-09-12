@@ -15,7 +15,7 @@
  {:name "data.json"
   :owners ["stuartsierra"]}
  {:name "data.priority-map"
-  :owners ["markengelberg"]}
+  :owners ["markengelberg" "seancorfield"]}
  {:name "data.xml"
   :owners []}
  {:name "data.zip"
@@ -29,9 +29,9 @@
  {:name "java.jmx"
   :owners []}
  {:name "math.combinatorics"
-  :owners ["markengelberg"]}
+  :owners ["markengelberg" "seancorfield"]}
  {:name "math.numeric-tower"
-  :owners ["markengelberg"]}
+  :owners ["markengelberg" "seancorfield"]}
  {:name "test.generative"
   :owners []}
  {:name "tools.cli"
