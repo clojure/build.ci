@@ -28,7 +28,7 @@
 (defn default-jdk [] (first (jdk-names)))
 
 (defn active-clojures []
-  ["1.2.0" "1.2.1" "1.3.0-beta3"])
+  ["1.2.0" "1.2.1" "1.3.0-RC0"])
 
 (defn contrib-libs-url []
   (io/resource "libs.clj"))
