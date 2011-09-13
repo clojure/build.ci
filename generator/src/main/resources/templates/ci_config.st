@@ -20,41 +20,11 @@
 &lt;p&gt;Older &lt;a href=&quot;/releases&quot;&gt;releases&lt;/a&gt; and &lt;a href=&quot;/snapshots&quot;&gt;snapshots&lt;/a&gt; are hosted locally.&lt;/p&gt;&#xd;
 &lt;p&gt;All projects build on Sun/Oracle JDK 1.5 unless specified otherwise.&lt;/p&gt;</systemMessage>
   <jdks>
-    <jdk>
-      <name>Sun JDK 1.5</name>
-      <home>/var/lib/hudson/tools/Sun_JDK_1.5.0_22</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>Sun JDK 1.6</name>
-      <home>/usr/java/jdk1.6.0_20</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>Oracle JDK 1.7</name>
-      <home>/usr/java/jdk1.7.0-b147</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>IBM JDK 5</name>
-      <home>/usr/java/ibm-java2-x86_64-50</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>OpenJDK 1.6</name>
-      <home>/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>JRockit 1.5</name>
-      <home>/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1</home>
-      <properties/>
-    </jdk>
-    <jdk>
-      <name>JRockit 1.6</name>
-      <home>/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1</home>
-      <properties/>
-    </jdk>
+    $jdks:{ jdk |<jdk>
+  <name>$jdk.name$</name>
+  <home>$jdk.home$</home>
+  <properties/>
+</jdk>}; separator="\n"$
   </jdks>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>

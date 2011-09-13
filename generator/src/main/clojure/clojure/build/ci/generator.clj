@@ -1,8 +1,5 @@
 (ns clojure.build.ci.generator
-  (:require [clojure.java.io :as io]
-            [clojure.xml :as xml]
-            [clojure.zip :as zip]
-            [clojure.data.zip.xml :as dzx])
+  (:require [clojure.java.io :as io])
   (:import (org.stringtemplate.v4 ST)))
 
 (defn ci-root [] (io/file "hudson"))
@@ -13,17 +10,32 @@
 
 (defn job-config-file [jname] (io/file (job-dir jname) "config.xml"))
 
-(defn ci-config [] (io/file (ci-root) "config.xml"))
+(defn ci-config-file [] (io/file (ci-root) "config.xml"))
 
-(defn ci-config-zipper [] (zip/xml-zip (xml/parse (ci-config))))
+(defn jdks []
+  [{:name "Sun JDK 1.5",
+    :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"}
+   {:name "Sun JDK 1.6",
+    :home "/usr/java/jdk1.6.0_20"}
+   {:name "Oracle JDK 1.7",
+    :home "/usr/java/jdk1.7.0-b147"}
+   {:name "IBM JDK 5",
+    :home "/usr/java/ibm-java2-x86_64-50"}
+   {:name "OpenJDK 1.6",
+    :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"}
+   {:name "JRockit 1.5",
+    :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"}
+   {:name "JRockit 1.6",
+    :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"}])
 
 (defn remove-jrockit [coll]
-  (remove #(re-find #"(?i)jrockit" %) coll))
+  (remove #(re-find #"(?i)jrockit" (:name %)) coll))
+
+(defn active-jdks []
+  (remove-jrockit (jdks)))
 
 (defn jdk-names []
-  (vec (remove-jrockit
-        (dzx/xml-> (ci-config-zipper)
-                   :jdks :jdk :name dzx/text))))
+  (map :name (active-jdks)))
 
 (defn default-jdk [] (first (jdk-names)))
 
@@ -45,11 +57,12 @@
   (cond 
    (string? x) x
    (symbol? x) (name x)
+   (keyword? x) (name x)
    (map? x) (reduce (fn [m [k v]]
                       (assoc m
                         (prepare-template-arg k)
                         (prepare-template-arg v)))
-                    x)
+                    {} x)
    (sequential? x) (vec (map prepare-template-arg x))
    :else (str x)))
 
@@ -94,11 +107,14 @@
     (write-release-job lib)
     (write-matrix-job lib)))
 
+(defn ci-config []
+  (render-template "ci_config"
+                   {:libs (libs-and-matrix-jobs)
+                    :jdks (jdks)}))
+
 (defn write-ci-config []
-  (io/make-parents (ci-config))
-  (spit (ci-config)
-        (render-template "ci_config"
-                         {:libs (libs-and-matrix-jobs)})))
+  (io/make-parents (ci-config-file))
+  (spit (ci-config-file) (ci-config)))
 
 (defn -main []
   (write-job-files)
