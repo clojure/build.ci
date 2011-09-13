@@ -43,4 +43,6 @@
  {:name "tools.namespace"
   :owners []}
  {:name "tools.nrepl"
-  :owners []}]
+  :owners []}
+ {:name "tools.trace"
+  :owners ["lucprefontaine"]}]
