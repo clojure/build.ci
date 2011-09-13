@@ -59,6 +59,10 @@
       (.add t (name k) (prepare-template-arg v)))
     (.render t)))
 
+(defn libs-and-matrix-jobs []
+  (interleave (map :name (contrib-libs))
+              (map #(str (:name %) "-test-matrix") (contrib-libs))))
+
 (defn release-job-defaults []
   {:jdk (default-jdk)})
 
@@ -90,8 +94,15 @@
     (write-release-job lib)
     (write-matrix-job lib)))
 
+(defn write-ci-config []
+  (io/make-parents (ci-config))
+  (spit (ci-config)
+        (render-template "ci_config"
+                         {:libs (libs-and-matrix-jobs)})))
+
 (defn -main []
-  (write-job-files))
+  (write-job-files)
+  (write-ci-config))
 
 ;; Local Variables:
 ;; eval: (setq inferior-lisp-program (concat default-directory "../../../../../script/repl.sh"))
