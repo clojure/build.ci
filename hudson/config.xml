@@ -69,6 +69,113 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
     </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Clojure</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>clojure</string>
+        <string>clojure-test-matrix</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Contrib Libraries</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>algo.monads</string>
+        <string>algo.monads-test-matrix</string>
+        <string>core.incubator</string>
+        <string>core.incubator-test-matrix</string>
+        <string>core.logic</string>
+        <string>core.logic-test-matrix</string>
+        <string>core.match</string>
+        <string>core.match-test-matrix</string>
+        <string>core.unify</string>
+        <string>core.unify-test-matrix</string>
+        <string>data.csv</string>
+        <string>data.csv-test-matrix</string>
+        <string>data.finger-tree</string>
+        <string>data.finger-tree-test-matrix</string>
+        <string>data.json</string>
+        <string>data.json-test-matrix</string>
+        <string>data.priority-map</string>
+        <string>data.priority-map-test-matrix</string>
+        <string>data.xml</string>
+        <string>data.xml-test-matrix</string>
+        <string>data.zip</string>
+        <string>data.zip-test-matrix</string>
+        <string>java.classpath</string>
+        <string>java.classpath-test-matrix</string>
+        <string>java.data</string>
+        <string>java.data-test-matrix</string>
+        <string>java.jdbc</string>
+        <string>java.jdbc-test-matrix</string>
+        <string>java.jmx</string>
+        <string>java.jmx-test-matrix</string>
+        <string>math.combinatorics</string>
+        <string>math.combinatorics-test-matrix</string>
+        <string>math.numeric-tower</string>
+        <string>math.numeric-tower-test-matrix</string>
+        <string>test.generative</string>
+        <string>test.generative-test-matrix</string>
+        <string>tools.cli</string>
+        <string>tools.cli-test-matrix</string>
+        <string>tools.logging</string>
+        <string>tools.logging-test-matrix</string>
+        <string>tools.macro</string>
+        <string>tools.macro-test-matrix</string>
+        <string>tools.namespace</string>
+        <string>tools.namespace-test-matrix</string>
+        <string>tools.nrepl</string>
+        <string>tools.nrepl-test-matrix</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Support</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>build.ci</string>
+        <string>build.poms</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
   </views>
   <primaryView>All</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
