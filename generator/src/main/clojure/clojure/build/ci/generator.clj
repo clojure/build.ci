@@ -102,6 +102,15 @@
     (spit (job-config-file jobname)
           (matrix-job-config lib))))
 
+(defn rebuild-libs-config []
+  (render-template "rebuild_all_libs_job"
+   {:libs (map :name (contrib-libs))}))
+
+(defn write-rebuild-libs-job []
+  (let [jobfile (job-config-file "rebuild-all-libraries")]
+    (io/make-parents jobfile)
+    (spit jobfile (rebuild-libs-config))))
+
 (defn write-job-files []
   (doseq [lib (contrib-libs)]
     (write-release-job lib)
@@ -118,6 +127,7 @@
 
 (defn -main []
   (write-job-files)
+  (write-rebuild-libs-job)
   (write-ci-config))
 
 ;; Local Variables:
