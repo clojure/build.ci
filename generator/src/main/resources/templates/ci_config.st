@@ -89,6 +89,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>build.ci</string>
         <string>build.poms</string>
+        <string>rebuild-all-libraries</string>
       </jobNames>
       <jobFilters/>
       <columns>
