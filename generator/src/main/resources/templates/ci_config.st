@@ -62,7 +62,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Contrib Libraries</name>
+      <name>Contrib</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
