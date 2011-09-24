@@ -19,8 +19,10 @@
     :home "/usr/java/jdk1.6.0_20"}
    {:name "Oracle JDK 1.7",
     :home "/usr/java/jdk1.7.0-b147"}
-   {:name "IBM JDK 5",
+   {:name "IBM JDK 1.5",
     :home "/usr/java/ibm-java2-x86_64-50"}
+   {:name "IBM JDK 1.7"
+    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
    {:name "OpenJDK 1.6",
     :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"}
    {:name "JRockit 1.5",
