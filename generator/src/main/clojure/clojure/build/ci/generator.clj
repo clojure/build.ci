@@ -13,28 +13,33 @@
 (defn ci-config-file [] (io/file (ci-root) "config.xml"))
 
 (defn jdks []
-  [{:name "Sun JDK 1.5",
+  [{:name "Sun JDK 1.5"
+    :enabled true
     :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"}
-   {:name "Sun JDK 1.6",
+   {:name "Sun JDK 1.6"
+    :enabled true
     :home "/usr/java/jdk1.6.0_20"}
-   {:name "Oracle JDK 1.7",
+   {:name "Oracle JDK 1.7"
+    :enabled true
     :home "/usr/java/jdk1.7.0-b147"}
-   {:name "IBM JDK 1.5",
+   {:name "IBM JDK 1.5"
+    :enabled true
     :home "/usr/java/ibm-java2-x86_64-50"}
    {:name "IBM JDK 1.7"
+    :enabled false
     :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
-   {:name "OpenJDK 1.6",
+   {:name "OpenJDK 1.6"
+    :enabled true
     :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"}
-   {:name "JRockit 1.5",
+   {:name "JRockit 1.5"
+    :enabled false
     :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"}
-   {:name "JRockit 1.6",
+   {:name "JRockit 1.6"
+    :enabled false
     :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"}])
 
-(defn remove-jrockit [coll]
-  (remove #(re-find #"(?i)jrockit" (:name %)) coll))
-
 (defn active-jdks []
-  (remove-jrockit (jdks)))
+  (filter :enabled (jdks)))
 
 (defn jdk-names []
   (map :name (active-jdks)))
@@ -42,7 +47,7 @@
 (defn default-jdk [] (first (jdk-names)))
 
 (defn active-clojures []
-  ["1.2.0" "1.2.1" "1.3.0-RC0"])
+  ["1.2.0" "1.2.1" "1.3.0"])
 
 (defn contrib-libs-url []
   (io/resource "libs.clj"))
