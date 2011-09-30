@@ -30,7 +30,7 @@
   (first (jdk-names)))
 
 (defn active-clojures []
-  ["1.2.0" "1.2.1" "1.3.0"])
+  (:clojure-versions (input-data)))
 
 (defn contrib-libs []
   (:contribs (input-data)))
