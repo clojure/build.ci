@@ -6,10 +6,10 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.2.0" "1.2.1" "1.3.0" "LATEST"]
+ ["1.2.0" "1.2.1" "1.3.0" "1.4.0-master-SNAPSHOT"]
 
- ;; Installed Java versions. If :enabled is true we will build Clojure
- ;; and contrib libraries with that Java.
+ ;; Installed Java versions. If :enabled is true we will test contrib
+ ;; libraries with that Java version.
  :jdks
  [{:name "Sun JDK 1.5"
    :enabled true
@@ -24,10 +24,10 @@
    :enabled true
    :home "/usr/java/ibm-java2-x86_64-50"}
   {:name "IBM JDK 1.6"
-   :enabled true
+   :enabled false
    :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"}
   {:name "IBM JDK 1.7"
-   :enabled true
+   :enabled false
    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
   {:name "OpenJDK 1.6"
    :enabled true
