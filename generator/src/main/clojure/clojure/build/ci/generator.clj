@@ -2,6 +2,12 @@
   (:require [clojure.java.io :as io])
   (:import (org.stringtemplate.v4 ST)))
 
+(defn input-data-url [] (io/resource "ci_data.clj"))
+
+(defn input-data []
+  (with-open [r (java.io.PushbackReader. (io/reader (input-data-url)))]
+    (read r)))
+
 (defn ci-root [] (io/file "hudson"))
 
 (defn jobs-root [] (io/file (ci-root) "jobs"))
@@ -12,31 +18,7 @@
 
 (defn ci-config-file [] (io/file (ci-root) "config.xml"))
 
-(defn jdks []
-  [{:name "Sun JDK 1.5"
-    :enabled true
-    :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"}
-   {:name "Sun JDK 1.6"
-    :enabled true
-    :home "/usr/java/jdk1.6.0_20"}
-   {:name "Oracle JDK 1.7"
-    :enabled true
-    :home "/usr/java/jdk1.7.0-b147"}
-   {:name "IBM JDK 1.5"
-    :enabled true
-    :home "/usr/java/ibm-java2-x86_64-50"}
-   {:name "IBM JDK 1.7"
-    :enabled false
-    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
-   {:name "OpenJDK 1.6"
-    :enabled true
-    :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"}
-   {:name "JRockit 1.5"
-    :enabled false
-    :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"}
-   {:name "JRockit 1.6"
-    :enabled false
-    :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"}])
+(defn jdks [] (:jdks (input-data)))
 
 (defn active-jdks []
   (filter :enabled (jdks)))
@@ -44,17 +26,14 @@
 (defn jdk-names []
   (map :name (active-jdks)))
 
-(defn default-jdk [] (first (jdk-names)))
+(defn default-jdk []
+  (first (jdk-names)))
 
 (defn active-clojures []
   ["1.2.0" "1.2.1" "1.3.0"])
 
-(defn contrib-libs-url []
-  (io/resource "libs.clj"))
-
 (defn contrib-libs []
-  (with-open [r (java.io.PushbackReader. (io/reader (contrib-libs-url)))]
-    (read r)))
+  (:contribs (input-data)))
 
 (defn template [name]
   (ST. (slurp (io/resource (str "templates/" name ".st")))
