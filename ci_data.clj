@@ -24,7 +24,7 @@
    :enabled true
    :home "/usr/java/ibm-java2-x86_64-50"}
   {:name "IBM JDK 1.6"
-   :enabled false
+   :enabled true
    :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"}
   {:name "IBM JDK 1.7"
    :enabled false
