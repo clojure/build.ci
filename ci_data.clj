@@ -44,7 +44,9 @@
  ;; permission to build and release each library.
  :contribs
  [{:name "algo.monads"
-   :owners []}
+   :owners ["konradhinsen"]}
+  {:name "algo.generic"
+   :owners ["konradhinsen"]}
   {:name "core.incubator"
    :owners []}
   {:name "core.logic"
@@ -84,7 +86,7 @@
   {:name "tools.logging"
    :owners []}
   {:name "tools.macro"
-   :owners []}
+   :owners ["konradhinsen"]}
   {:name "tools.namespace"
    :owners []}
   {:name "tools.nrepl"
