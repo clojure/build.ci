@@ -56,7 +56,7 @@
   {:name "core.unify"
    :owners []}
   {:name "data.codec"
-   :owners []}
+   :owners ["ataggart"]}
   {:name "data.csv"
    :owners []}
   {:name "data.finger-tree"
