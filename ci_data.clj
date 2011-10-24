@@ -55,6 +55,8 @@
    :owners ["davidnolen"]}
   {:name "core.unify"
    :owners []}
+  {:name "data.codec"
+   :owners []}
   {:name "data.csv"
    :owners []}
   {:name "data.finger-tree"
