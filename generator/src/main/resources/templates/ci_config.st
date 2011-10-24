@@ -16,9 +16,8 @@
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>true</disableSignup>
   </securityRealm>
-  <systemMessage>&lt;p&gt;Clojure build server; deploying to &lt;a href=&quot;https://oss.sonatype.org/&quot;&gt;oss.sonatype.org&lt;/a&gt;; releases are sync&apos;ed to the &lt;a href=&quot;http://repo1.maven.org/maven2&quot;&gt;Maven Central Repository&lt;/a&gt;.&lt;/p&gt;&#xd;
-&lt;p&gt;Older &lt;a href=&quot;/releases&quot;&gt;releases&lt;/a&gt; and &lt;a href=&quot;/snapshots&quot;&gt;snapshots&lt;/a&gt; are hosted locally.&lt;/p&gt;&#xd;
-&lt;p&gt;All projects build on Sun/Oracle JDK 1.5 unless specified otherwise.&lt;/p&gt;</systemMessage>
+  <systemMessage>&lt;p&gt;Clojure build server, deploying to &lt;a href=&quot;https://oss.sonatype.org/&quot;&gt;Sonatype OSS&lt;/a&gt;. See &lt;a href=&quot;http://dev.clojure.org/display/doc/Maven+Settings+and+Repositories&quot;&gt;Maven Settings and Repositories&lt;/a&gt; on the Clojure Wiki for more information.&#xd;
+&lt;p&gt;All projects build on Sun/Oracle JDK 1.5. "-test-matrix" jobs test multiple JDKs and Clojure versions.&lt;/p&gt;</systemMessage>
   <jdks>
     $jdks:{ jdk |<jdk>
   <name>$jdk.name$</name>
