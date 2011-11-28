@@ -55,6 +55,10 @@
    :owners ["davidnolen"]}
   {:name "core.unify"
    :owners []}
+  {:name "core.memoize"
+   :owners ["fogus"]}
+  {:name "core.cache"
+   :owners ["fogus"]}
   {:name "data.codec"
    :owners ["ataggart"]}
   {:name "data.csv"
