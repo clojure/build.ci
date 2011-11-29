@@ -54,7 +54,7 @@
   {:name "core.match"
    :owners ["davidnolen"]}
   {:name "core.unify"
-   :owners []}
+   :owners ["fogus"]}
   {:name "core.memoize"
    :owners ["fogus"]}
   {:name "core.cache"
