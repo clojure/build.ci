@@ -26,8 +26,10 @@
 (defn jdk-names []
   (map :name (active-jdks)))
 
-(defn default-jdk []
-  (first (jdk-names)))
+(defn default-jdk [jdk-version]
+  (first (filter #(= (or jdk-version "1.5")
+                     (:jdk-version %))
+                 (active-jdks))))
 
 (defn active-clojures []
   (:clojure-versions (input-data)))
@@ -62,8 +64,8 @@
   (interleave (map :name (contrib-libs))
               (map #(str (:name %) "-test-matrix") (contrib-libs))))
 
-(defn release-job-defaults [{:keys (jdk)}]
-  {:jdk (or jdk (default-jdk))})
+(defn release-job-defaults [{:keys (jdk-version)}]
+  {:jdk (:name (default-jdk jdk-version))})
 
 (defn release-job-config [lib]
   (render-template "release_job"

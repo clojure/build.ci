@@ -13,32 +13,41 @@
  :jdks
  [{:name "Sun JDK 1.5"
    :enabled true
-   :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"}
+   :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"
+   :jdk-version "1.5"}
   {:name "Sun JDK 1.6"
    :enabled true
-   :home "/usr/java/jdk1.6.0_20"}
+   :home "/usr/java/jdk1.6.0_20"
+   :jdk-version "1.6"}
   {:name "Oracle JDK 1.7"
    :enabled true
-   :home "/usr/java/jdk1.7.0-b147"}
+   :home "/usr/java/jdk1.7.0-b147"
+   :jdk-version "1.7"}
   {:name "IBM JDK 1.5"
    :enabled true
-   :home "/usr/java/ibm-java2-x86_64-50"}
+   :home "/usr/java/ibm-java2-x86_64-50"
+   :jdk-version "1.5"}
   {:name "IBM JDK 1.6"
    :enabled true
-   :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"}
+   :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"
+   :jdk-version "1.6"}
   {:name "IBM JDK 1.7"
    :enabled false
-   :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
+   :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
+   :jdk-version "1.7"}
   {:name "OpenJDK 1.6"
    :enabled true
-   :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"}
+   :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"
+   :jdk-version "1.6"}
   ;; Some Clojure language tests fail on JRockit
   {:name "JRockit 1.5"
    :enabled false
-   :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"}
+   :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"
+   :jdk-version "1.5"}
   {:name "JRockit 1.6"
    :enabled false
-   :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"}]
+   :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"
+   :jdk-version "1.6"}]
 
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
@@ -71,7 +80,7 @@
    :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"
    :owners []
-   :jdk "Sun JDK 1.6"}
+   :jdk-version "1.6"}
   {:name "data.zip"
    :owners []}
   {:name "java.classpath"
