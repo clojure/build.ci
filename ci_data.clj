@@ -70,7 +70,8 @@
   {:name "data.priority-map"
    :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"
-   :owners []}
+   :owners []
+   :jdk "Sun JDK 1.6"}
   {:name "data.zip"
    :owners []}
   {:name "java.classpath"

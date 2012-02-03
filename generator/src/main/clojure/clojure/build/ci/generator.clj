@@ -62,12 +62,12 @@
   (interleave (map :name (contrib-libs))
               (map #(str (:name %) "-test-matrix") (contrib-libs))))
 
-(defn release-job-defaults []
-  {:jdk (default-jdk)})
+(defn release-job-defaults [{:keys (jdk)}]
+  {:jdk (or jdk (default-jdk))})
 
 (defn release-job-config [lib]
   (render-template "release_job"
-                   (merge (release-job-defaults) lib)))
+                   (merge (release-job-defaults lib) lib)))
 
 (defn matrix-job-defaults []
   {:jdks (jdk-names)
