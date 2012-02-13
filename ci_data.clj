@@ -62,7 +62,7 @@
   {:name "data.codec"
    :owners ["ataggart"]}
   {:name "data.csv"
-   :owners []}
+   :owners ["jonasenlund"]}
   {:name "data.finger-tree"
    :owners ["Chouser"]}
   {:name "data.json"
