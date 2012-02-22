@@ -80,7 +80,7 @@
   {:name "java.jdbc"
    :owners ["seancorfield"]}
   {:name "java.jmx"
-   :owners []}
+   :owners ["nickbailey"]}
   {:name "math.combinatorics"
    :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower"
