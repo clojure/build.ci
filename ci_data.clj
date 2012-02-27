@@ -79,7 +79,7 @@
   {:name "data.priority-map"
    :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"
-   :owners []
+   :owners ["ryansenior"]
    :jdk-version "1.6"}
   {:name "data.zip"
    :owners []}
