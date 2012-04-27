@@ -68,6 +68,8 @@
    :owners ["fogus"]}
   {:name "core.cache"
    :owners ["fogus"]}
+  {:name "core.contracts"
+   :owners ["fogus"]}
   {:name "data.codec"
    :owners ["ataggart"]}
   {:name "data.csv"
