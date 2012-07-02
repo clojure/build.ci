@@ -102,7 +102,7 @@
   {:name "tools.cli"
    :owners ["garethjones"]}
   {:name "tools.logging"
-   :owners []}
+   :owners ["ataggart"]}
   {:name "tools.macro"
    :owners ["konradhinsen"]}
   {:name "tools.namespace"
