@@ -79,5 +79,5 @@
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"]}
-  {:name "tools.nrepl"        :owners []}
+  {:name "tools.nrepl"        :owners ["cemerick"]}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
