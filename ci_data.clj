@@ -68,7 +68,7 @@
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior"] :jdk-version "1.6"}
   {:name "data.zip"           :owners []}
-  {:name "java.classpath"     :owners []}
+  {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean"]}
   {:name "java.jdbc"          :owners ["seancorfield"]}
   {:name "java.jmx"           :owners ["nickbailey"]}
@@ -78,6 +78,6 @@
   {:name "tools.cli"          :owners ["garethjones"]}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
-  {:name "tools.namespace"    :owners []}
+  {:name "tools.namespace"    :owners ["stuartsierra"]}
   {:name "tools.nrepl"        :owners []}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
