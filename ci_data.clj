@@ -74,7 +74,7 @@
   {:name "java.jmx"           :owners ["nickbailey"]}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "test.generative"    :owners []}
+  {:name "test.generative"    :owners ["stuart.halloway"]}
   {:name "tools.cli"          :owners ["garethjones"]}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
