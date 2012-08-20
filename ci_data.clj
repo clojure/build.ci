@@ -52,62 +52,32 @@
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
  :contribs
- [{:name "algo.monads"
-   :owners ["konradhinsen"]}
-  {:name "algo.generic"
-   :owners ["konradhinsen"]}
-  {:name "core.incubator"
-   :owners []}
-  {:name "core.logic"
-   :owners ["davidnolen"]}
-  {:name "core.match"
-   :owners ["davidnolen"]}
-  {:name "core.unify"
-   :owners ["fogus"]}
-  {:name "core.memoize"
-   :owners ["fogus"]}
-  {:name "core.cache"
-   :owners ["fogus"]}
-  {:name "core.contracts"
-   :owners ["fogus"]}
-  {:name "data.codec"
-   :owners ["ataggart"]}
-  {:name "data.csv"
-   :owners ["jonasenlund"]}
-  {:name "data.finger-tree"
-   :owners ["Chouser"]}
-  {:name "data.json"
-   :owners ["stuartsierra"]}
-  {:name "data.priority-map"
-   :owners ["markengelberg" "seancorfield"]}
-  {:name "data.xml"
-   :owners ["ryansenior"]
-   :jdk-version "1.6"}
-  {:name "data.zip"
-   :owners []}
-  {:name "java.classpath"
-   :owners []}
-  {:name "java.data"
-   :owners ["cosminstejerean"]}
-  {:name "java.jdbc"
-   :owners ["seancorfield"]}
-  {:name "java.jmx"
-   :owners ["nickbailey"]}
-  {:name "math.combinatorics"
-   :owners ["markengelberg" "seancorfield"]}
-  {:name "math.numeric-tower"
-   :owners ["markengelberg" "seancorfield"]}
-  {:name "test.generative"
-   :owners []}
-  {:name "tools.cli"
-   :owners ["garethjones"]}
-  {:name "tools.logging"
-   :owners ["ataggart"]}
-  {:name "tools.macro"
-   :owners ["konradhinsen"]}
-  {:name "tools.namespace"
-   :owners []}
-  {:name "tools.nrepl"
-   :owners []}
-  {:name "tools.trace"
-   :owners ["lucprefontaine"]}]}
+ [{:name "algo.monads"        :owners ["konradhinsen"]}
+  {:name "algo.generic"       :owners ["konradhinsen"]}
+  {:name "core.incubator"     :owners []}
+  {:name "core.logic"         :owners ["davidnolen"]}
+  {:name "core.match"         :owners ["davidnolen"]}
+  {:name "core.unify"         :owners ["fogus"]}
+  {:name "core.memoize"       :owners ["fogus"]}
+  {:name "core.cache"         :owners ["fogus"]}
+  {:name "core.contracts"     :owners ["fogus"]}
+  {:name "data.codec"         :owners ["ataggart"]}
+  {:name "data.csv"           :owners ["jonasenlund"]}
+  {:name "data.finger-tree"   :owners ["Chouser"]}
+  {:name "data.json"          :owners ["stuartsierra"]}
+  {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
+  {:name "data.xml"           :owners ["ryansenior"] :jdk-version "1.6"}
+  {:name "data.zip"           :owners []}
+  {:name "java.classpath"     :owners []}
+  {:name "java.data"          :owners ["cosminstejerean"]}
+  {:name "java.jdbc"          :owners ["seancorfield"]}
+  {:name "java.jmx"           :owners ["nickbailey"]}
+  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
+  {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
+  {:name "test.generative"    :owners []}
+  {:name "tools.cli"          :owners ["garethjones"]}
+  {:name "tools.logging"      :owners ["ataggart"]}
+  {:name "tools.macro"        :owners ["konradhinsen"]}
+  {:name "tools.namespace"    :owners []}
+  {:name "tools.nrepl"        :owners []}
+  {:name "tools.trace"        :owners ["lucprefontaine"]}]}
