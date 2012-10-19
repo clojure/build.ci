@@ -64,6 +64,7 @@
   {:name "data.codec"         :owners ["ataggart"]}
   {:name "data.csv"           :owners ["jonasenlund"]}
   {:name "data.finger-tree"   :owners ["Chouser"]}
+  {:name "data.generators"    :owners ["stuart.halloway"]}
   {:name "data.json"          :owners ["stuartsierra"]}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior"] :jdk-version "1.6"}
