@@ -81,4 +81,5 @@
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"]}
   {:name "tools.nrepl"        :owners ["cemerick"]}
+  {:name "tools.reader"       :owners ["nicolamometto"]}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
