@@ -75,9 +75,24 @@
   {:jdks (jdk-names)
    :clojures (active-clojures)})
 
+(defn update-min-clojure [lib]
+  (if-let [version (:min-clojure lib)]
+    (update-in lib [:clojures]
+               (fn [versions] (drop-while #(not= version %) versions)))
+    lib))
+
+(defn update-exclude-jdk [lib]
+  (if-let [exclusions (:exclude-jdk lib)]
+    (update-in lib [:jdks]
+               (fn [versions] (remove (set exclusions) versions)))
+    lib))
+
 (defn matrix-job-config [lib]
   (render-template "matrix_job"
-                   (merge (matrix-job-defaults) lib)))
+                   (-> (matrix-job-defaults)
+                       (merge lib)
+                       (update-min-clojure)
+                       (update-exclude-jdk))))
 
 (defn write-release-job [lib]
   (.mkdirs (job-dir (:name lib)))

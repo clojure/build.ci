@@ -7,6 +7,7 @@
   <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
     <permission>hudson.model.Hudson.Administer:abedra</permission>
     <permission>hudson.model.Hudson.Administer:cemerick</permission>
+    <permission>hudson.model.Hudson.Administer:chrisredinger</permission>
     <permission>hudson.model.Hudson.Administer:richhickey</permission>
     <permission>hudson.model.Hudson.Administer:stuart.halloway</permission>
     <permission>hudson.model.Hudson.Administer:stuartsierra</permission>
@@ -16,9 +17,8 @@
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>true</disableSignup>
   </securityRealm>
-  <systemMessage>&lt;p&gt;Clojure build server; deploying to &lt;a href=&quot;https://oss.sonatype.org/&quot;&gt;oss.sonatype.org&lt;/a&gt;; releases are sync&apos;ed to the &lt;a href=&quot;http://repo1.maven.org/maven2&quot;&gt;Maven Central Repository&lt;/a&gt;.&lt;/p&gt;&#xd;
-&lt;p&gt;Older &lt;a href=&quot;/releases&quot;&gt;releases&lt;/a&gt; and &lt;a href=&quot;/snapshots&quot;&gt;snapshots&lt;/a&gt; are hosted locally.&lt;/p&gt;&#xd;
-&lt;p&gt;All projects build on Sun/Oracle JDK 1.5 unless specified otherwise.&lt;/p&gt;</systemMessage>
+  <systemMessage>&lt;p&gt;Clojure build server, deploying to &lt;a href=&quot;https://oss.sonatype.org/&quot;&gt;Sonatype OSS&lt;/a&gt;. See &lt;a href=&quot;http://dev.clojure.org/display/doc/Maven+Settings+and+Repositories&quot;&gt;Maven Settings and Repositories&lt;/a&gt; on the Clojure Wiki for more information.&#xd;
+&lt;p&gt;All projects build on Sun/Oracle JDK 1.5. "-test-matrix" jobs test multiple JDKs and Clojure versions.&lt;/p&gt;</systemMessage>
   <jdks>
     <jdk>
       <name>Sun JDK 1.5</name>
@@ -36,8 +36,18 @@
       <properties/>
     </jdk>
     <jdk>
-      <name>IBM JDK 5</name>
+      <name>IBM JDK 1.5</name>
       <home>/usr/java/ibm-java2-x86_64-50</home>
+      <properties/>
+    </jdk>
+    <jdk>
+      <name>IBM JDK 1.6</name>
+      <home>/usr/java/ibm-java-x86_64-sdk-6.0-9.2</home>
+      <properties/>
+    </jdk>
+    <jdk>
+      <name>IBM JDK 1.7</name>
+      <home>/usr/java/ibm-java-x86_64-sdk-7.0-0.0</home>
       <properties/>
     </jdk>
     <jdk>
@@ -92,13 +102,15 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Contrib Libraries</name>
+      <name>Contrib</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>algo.monads</string>
         <string>algo.monads-test-matrix</string>
+        <string>algo.generic</string>
+        <string>algo.generic-test-matrix</string>
         <string>core.incubator</string>
         <string>core.incubator-test-matrix</string>
         <string>core.logic</string>
@@ -107,10 +119,20 @@
         <string>core.match-test-matrix</string>
         <string>core.unify</string>
         <string>core.unify-test-matrix</string>
+        <string>core.memoize</string>
+        <string>core.memoize-test-matrix</string>
+        <string>core.cache</string>
+        <string>core.cache-test-matrix</string>
+        <string>core.contracts</string>
+        <string>core.contracts-test-matrix</string>
+        <string>data.codec</string>
+        <string>data.codec-test-matrix</string>
         <string>data.csv</string>
         <string>data.csv-test-matrix</string>
         <string>data.finger-tree</string>
         <string>data.finger-tree-test-matrix</string>
+        <string>data.generators</string>
+        <string>data.generators-test-matrix</string>
         <string>data.json</string>
         <string>data.json-test-matrix</string>
         <string>data.priority-map</string>
@@ -143,6 +165,10 @@
         <string>tools.namespace-test-matrix</string>
         <string>tools.nrepl</string>
         <string>tools.nrepl-test-matrix</string>
+        <string>tools.reader</string>
+        <string>tools.reader-test-matrix</string>
+        <string>tools.trace</string>
+        <string>tools.trace-test-matrix</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -164,6 +190,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>build.ci</string>
         <string>build.poms</string>
+        <string>rebuild-all-libraries</string>
       </jobNames>
       <jobFilters/>
       <columns>

@@ -55,19 +55,19 @@
  [{:name "algo.monads"        :owners ["konradhinsen"]}
   {:name "algo.generic"       :owners ["konradhinsen"]}
   {:name "core.incubator"     :owners []}
-  {:name "core.logic"         :owners ["davidnolen"]}
-  {:name "core.match"         :owners ["davidnolen"]}
+  {:name "core.logic"         :owners ["davidnolen"] :min-clojure "1.3.0"}
+  {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.3.0"}
   {:name "core.unify"         :owners ["fogus"]}
   {:name "core.memoize"       :owners ["fogus"]}
   {:name "core.cache"         :owners ["fogus"]}
   {:name "core.contracts"     :owners ["fogus"]}
-  {:name "data.codec"         :owners ["ataggart"]}
+  {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.3.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
-  {:name "data.finger-tree"   :owners ["Chouser"]}
+  {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.2.1"}
   {:name "data.generators"    :owners ["stuart.halloway"]}
-  {:name "data.json"          :owners ["stuartsierra"]}
+  {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
-  {:name "data.xml"           :owners ["ryansenior"] :jdk-version "1.6"}
+  {:name "data.xml"           :owners ["ryansenior"] :exclude-jdk #{"Sun JDK 1.5" "IBM JDK 1.5" "IBM JDK 1.6"}}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean"]}
@@ -79,7 +79,7 @@
   {:name "tools.cli"          :owners ["garethjones"]}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
-  {:name "tools.namespace"    :owners ["stuartsierra"]}
+  {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "tools.nrepl"        :owners ["cemerick"]}
   {:name "tools.reader"       :owners ["nicolamometto"]}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
