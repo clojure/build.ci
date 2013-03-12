@@ -61,6 +61,7 @@
   {:name "core.memoize"       :owners ["fogus"]}
   {:name "core.cache"         :owners ["fogus"]}
   {:name "core.contracts"     :owners ["fogus"]}
+  {:name "core.typed"         :owners ["ambrosebs"]}
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.3.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
   {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.2.1"}
