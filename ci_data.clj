@@ -82,4 +82,5 @@
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "tools.nrepl"        :owners ["cemerick"]}
   {:name "tools.reader"       :owners ["nicolamometto"] :min-clojure "1.3.0"}
-  {:name "tools.trace"        :owners ["lucprefontaine"]}]}
+  {:name "tools.trace"        :owners ["lucprefontaine"]}
+  {:name "tools.analyzer.jvm" :owners ["ambrosebs"]}]}
