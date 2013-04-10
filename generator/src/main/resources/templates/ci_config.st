@@ -5,7 +5,7 @@
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
-    <permission>hudson.model.Hudson.Administer:abedra</permission>
+    <permission>hudson.model.Hudson.Administer:bobby</permission>
     <permission>hudson.model.Hudson.Administer:cemerick</permission>
     <permission>hudson.model.Hudson.Administer:chrisredinger</permission>
     <permission>hudson.model.Hudson.Administer:richhickey</permission>
