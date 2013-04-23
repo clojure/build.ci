@@ -76,6 +76,7 @@
     <artifactId>$name$</artifactId>
   </rootModule>
   <goals>--fail-at-end clean deploy</goals>
+  <mavenName>Maven 2.2.1</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <usePrivateRepository>false</usePrivateRepository>
@@ -103,7 +104,7 @@
       <runIfResult>success</runIfResult>
     </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
     <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
-      <releaseGoals>-Dresume=false -DtargetRepositoryId=releases -Dnexus.promote.autoSelectOverride=true release:prepare release:perform nexus:staging-close nexus:staging-release</releaseGoals>
+      <releaseGoals>release:prepare release:perform -Psonatype-oss-release</releaseGoals>
       <defaultVersioningMode>specify_version</defaultVersioningMode>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
