@@ -104,7 +104,7 @@
       <runIfResult>success</runIfResult>
     </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
     <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
-      <releaseGoals>release:prepare release:perform -Psonatype-oss-release</releaseGoals>
+      <releaseGoals>release:prepare release:perform -Psonatype-oss-release -Dgoals="deploy nexus-staging:release"</releaseGoals>
       <defaultVersioningMode>specify_version</defaultVersioningMode>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
