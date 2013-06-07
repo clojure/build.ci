@@ -54,6 +54,7 @@
  :contribs
  [{:name "algo.monads"        :owners ["konradhinsen"]}
   {:name "algo.generic"       :owners ["konradhinsen"]}
+  {:name "core.async"         :owners ["richhickey"] :min-clojure "1.5.1"}
   {:name "core.incubator"     :owners []}
   {:name "core.logic"         :owners ["davidnolen"] :min-clojure "1.3.0"}
   {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.3.0"}
