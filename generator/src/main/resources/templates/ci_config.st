@@ -12,6 +12,7 @@
     <permission>hudson.model.Hudson.Administer:stuart.halloway</permission>
     <permission>hudson.model.Hudson.Administer:stuartsierra</permission>
     <permission>hudson.model.Hudson.Administer:alexmiller</permission>
+    <permission>hudson.model.Hudson.Administer:samumbach</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
   </authorizationStrategy>
