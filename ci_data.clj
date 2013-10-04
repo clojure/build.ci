@@ -79,9 +79,9 @@
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "test.generative"    :owners ["stuart.halloway"]}
-  {:name "tools.analyzer"     :owners ["bronsa"]}
-  {:name "tools.analyzer.jvm" :owners ["bronsa"]}
-  {:name "tools.emitter.jvm"  :owners ["bronsa"]}
+  {:name "tools.analyzer"     :owners ["nicolamometto"]}
+  {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
+  {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
   {:name "tools.cli"          :owners ["garethjones"]}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
