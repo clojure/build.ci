@@ -12,7 +12,7 @@
  ;; libraries with that Java version.
  :jdks
  [{:name "Sun JDK 1.5"
-   :enabled true
+   :enabled false
    :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"
    :jdk-version "1.5"}
   {:name "Sun JDK 1.6"
@@ -24,7 +24,7 @@
    :home "/usr/java/jdk1.7.0-b147"
    :jdk-version "1.7"}
   {:name "IBM JDK 1.5"
-   :enabled true
+   :enabled false
    :home "/usr/java/ibm-java2-x86_64-50"
    :jdk-version "1.5"}
   {:name "IBM JDK 1.6"
