@@ -78,7 +78,7 @@
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "test.generative"    :owners ["stuart.halloway"]}
+  {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"]}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
