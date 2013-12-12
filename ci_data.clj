@@ -84,7 +84,7 @@
   {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.4.0"}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.4.0"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"] :min-clojure "1.4.0"}
-  {:name "tools.cli"          :owners ["garethjones"]}
+  {:name "tools.cli"          :owners ["garethjones" "sungpae"]}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.3.0"}
