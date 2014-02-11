@@ -90,6 +90,6 @@
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.3.0"}
-  {:name "tools.nrepl"        :owners ["cemerick"]}
+  {:name "tools.nrepl"        :owners ["cemerick"] :min-clojure "1.2.1"}
   {:name "tools.reader"       :owners ["nicolamometto"] :min-clojure "1.3.0"}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
