@@ -67,7 +67,7 @@
   {:name "data.avl"           :owners ["michalmarczyk"] :min-clojure "1.5.1"}
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.3.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
-  {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.2.1"}
+  {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.4.0"}
   {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.5.1"}
   {:name "data.generators"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
