@@ -61,7 +61,7 @@
   {:name "algo.graph"         :owners ["halgari"]}
   {:name "core.incubator"     :owners []}
   {:name "core.logic"         :owners ["davidnolen"] :min-clojure "1.3.0"}
-  {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.3.0"}
+  {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.4.0"}
   {:name "core.unify"         :owners ["fogus"]}
   {:name "core.memoize"       :owners ["fogus"] :min-clojure "1.2.1"}
   {:name "core.cache"         :owners ["fogus"]}
