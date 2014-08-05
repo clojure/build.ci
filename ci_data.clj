@@ -64,7 +64,7 @@
   {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.4.0"}
   {:name "core.unify"         :owners ["fogus"]}
   {:name "core.memoize"       :owners ["fogus"] :min-clojure "1.2.1"}
-  {:name "core.cache"         :owners ["fogus" "ambrosebs"]}
+  {:name "core.cache"         :owners ["fogus" "ambrosebs"] :min-clojure "1.3.0"}
   {:name "core.contracts"     :owners ["fogus"]}
   {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1" :exclude-jdk #{"Sun JDK 1.5" "IBM JDK 1.5"}}
   {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.5.1" :jdk-version "1.7"}
