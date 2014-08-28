@@ -11,11 +11,7 @@
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
  :jdks
- [{:name "Sun JDK 1.5"
-   :enabled false
-   :home "/var/lib/hudson/tools/Sun_JDK_1.5.0_22"
-   :jdk-version "1.5"}
-  {:name "Sun JDK 1.6"
+ [{:name "Sun JDK 1.6"
    :enabled true
    :home "/usr/java/jdk1.6.0_20"
    :jdk-version "1.6"}
@@ -27,10 +23,6 @@
    :enabled true
    :home "/usr/java/jdk1.8.0_05"
    :jdk-version "1.8"}
-  {:name "IBM JDK 1.5"
-   :enabled false
-   :home "/usr/java/ibm-java2-x86_64-50"
-   :jdk-version "1.5"}
   {:name "IBM JDK 1.6"
    :enabled true
    :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"
@@ -44,10 +36,6 @@
    :home "/usr/java/java-1.6.0-openjdk-1.6.0.0.x86_64"
    :jdk-version "1.6"}
   ;; Some Clojure language tests fail on JRockit
-  {:name "JRockit 1.5"
-   :enabled false
-   :home "/usr/java/jrockit-jdk1.5.0_28-R28.1.3-4.0.1"
-   :jdk-version "1.5"}
   {:name "JRockit 1.6"
    :enabled false
    :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"
@@ -66,7 +54,7 @@
   {:name "core.memoize"       :owners ["fogus"] :min-clojure "1.2.1"}
   {:name "core.cache"         :owners ["fogus" "ambrosebs"] :min-clojure "1.3.0"}
   {:name "core.contracts"     :owners ["fogus"]}
-  {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1" :exclude-jdk #{"Sun JDK 1.5" "IBM JDK 1.5"}}
+  {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1"}
   {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "data.avl"           :owners ["michalmarczyk"] :min-clojure "1.5.1"}
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.3.0"}
@@ -77,7 +65,7 @@
   {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
-  {:name "data.xml"           :owners ["ryansenior"] :exclude-jdk #{"Sun JDK 1.5" "IBM JDK 1.5" "IBM JDK 1.6"}}
+  {:name "data.xml"           :owners ["ryansenior"] :exclude-jdk #{"IBM JDK 1.6"}}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean"]}
