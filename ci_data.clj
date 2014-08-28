@@ -74,7 +74,7 @@
   {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.4.0"}
   {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.5.1"}
   {:name "data.generators"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
-  {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0"}
+  {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior"] :exclude-jdk #{"Sun JDK 1.5" "IBM JDK 1.5" "IBM JDK 1.6"}}
