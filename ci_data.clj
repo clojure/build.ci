@@ -71,7 +71,7 @@
   {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean"]}
   {:name "java.jdbc"          :owners ["seancorfield"]}
-  {:name "java.jmx"           :owners ["nickbailey"]}
+  {:name "java.jmx"           :owners ["nickbailey"] :min-clojure "1.2.1"}
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
