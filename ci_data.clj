@@ -77,9 +77,9 @@
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "test.check"         :owners ["reiddraper"] :min-clojure "1.5.1"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
-  {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.4.0"}
+  {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.analyzer.js"  :owners ["nicolamometto"] :min-clojure "1.5.1"}
-  {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.4.0"}
+  {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.cli"          :owners ["garethjones" "sungpae"]}
   {:name "tools.logging"      :owners ["ataggart"] :min-clojure "1.3.0"}
