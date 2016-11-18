@@ -32,7 +32,7 @@
    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
    :jdk-version "1.7"}
   {:name "OpenJDK 1.6"
-   :enabled true
+   :enabled false
    :home "/usr/lib/jvm/java-1.6.0-openjdk.x86_64"
    :jdk-version "1.6"}
   ;; Some Clojure language tests fail on JRockit
