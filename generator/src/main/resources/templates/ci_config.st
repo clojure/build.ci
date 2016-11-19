@@ -21,8 +21,7 @@
   <projectNamingStrategy class= "jenkins.model.ProjectNamingStrategy\$DefaultProjectNamingStrategy"/>
   <workspaceDir>\${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>\${ITEM_ROOTDIR}/builds</buildsDir>
-  <systemMessage>&lt;p&gt;Clojure build server, deploying to &lt;a href=&quot;https://oss.sonatype.org/&quot;&gt;Sonatype OSS&lt;/a&gt;. See &lt;a href=&quot;http://dev.clojure.org/display/doc/Maven+Settings+and+Repositories&quot;&gt;Maven Settings and Repositories&lt;/a&gt; on the Clojure Wiki for more information.&#xd;
-&lt;p&gt;All projects build on Sun/Oracle JDK 1.6. "-test-matrix" jobs test multiple JDKs and Clojure versions.&lt;/p&gt;</systemMessage>
+  <systemMessage>Clojure build server, deploying to https://oss.sonatype.org/. See http://dev.clojure.org/display/doc/Maven+Settings+and+Repositories on the Clojure Wiki for more information.</systemMessage>
   <jdks>
     $jdks:{ jdk |<jdk>
   <name>$jdk.name$</name>
