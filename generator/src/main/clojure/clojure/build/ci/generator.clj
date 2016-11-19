@@ -8,7 +8,7 @@
   (with-open [r (java.io.PushbackReader. (io/reader (input-data-url)))]
     (read r)))
 
-(defn ci-root [] (io/file "hudson"))
+(defn ci-root [] (io/file "jenkins"))
 
 (defn jobs-root [] (io/file (ci-root) "jobs"))
 
