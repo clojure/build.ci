@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.security.RekeySecretAdminMonitor</string>
+    <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
+  </disabledAdministrativeMonitors>
   <version>1.386</version>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
