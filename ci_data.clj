@@ -32,7 +32,7 @@
    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
    :jdk-version "1.7"}
   {:name "OpenJDK 1.6"
-   :enabled false
+   :enabled true
    :home "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.40.x86_64"
    :jdk-version "1.6"}
   ;; Some Clojure language tests fail on JRockit
@@ -72,7 +72,7 @@
   {:name "java.data"          :owners ["cosminstejerean"]}
   {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.4.0"}
   {:name "java.jmx"           :owners ["nickbailey"] :min-clojure "1.4.0"}
-  {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
+  {:name "jvm.tools.analyzer" :owners ["ambrosebs"] :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "test.check"         :owners ["reiddraper" "gfredericks"] :min-clojure "1.7.0"}
