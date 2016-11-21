@@ -120,5 +120,4 @@
   </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>
-  <disabledAdministrativeMonitors/>
 </hudson>
