@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@1.386">
+<maven2-moduleset plugin="maven-plugin@2.14">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
@@ -75,9 +75,19 @@
   <mavenName>Maven 2.2.1</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <usePrivateRepository>false</usePrivateRepository>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>
   <archivingDisabled>false</archivingDisabled>
+  <siteArchivingDisabled>false</siteArchivingDisabled>
+  <fingerprintingDisabled>false</fingerprintingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>0</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
   <publishers>
     <hudson.tasks.BuildTrigger>
@@ -100,11 +110,24 @@
       </postBuildSteps>
       <runIfResult>success</runIfResult>
     </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
-    <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
+    <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper plugin="m2release@0.14.0">
+      <scmUserEnvVar></scmUserEnvVar>
+      <scmPasswordEnvVar></scmPasswordEnvVar>
+      <releaseEnvVar>IS_M2RELEASEBUILD</releaseEnvVar>
       <releaseGoals>release:prepare release:perform -Psonatype-oss-release -Dgoals=&quot;deploy nexus-staging:release&quot;</releaseGoals>
-      <defaultVersioningMode>specify_version</defaultVersioningMode>
+      <dryRunGoals>-Dresume=false -DdryRun=true release:prepare</dryRunGoals>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
+      <selectScmCredentials>false</selectScmCredentials>
+      <numberOfReleaseBuildsToKeep>0</numberOfReleaseBuildsToKeep>
     </org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
   </buildWrappers>
+  <prebuilders/>
+  <postbuilders/>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+    <completeBuild>true</completeBuild>
+  </runPostStepsIfResult>
 </maven2-moduleset>
