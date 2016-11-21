@@ -45,6 +45,14 @@
       <hudson.plugins.git.extensions.impl.LocalBranch>
         <localBranch>master</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
+      <hudson.plugins.git.extensions.impl.PreBuildMerge>
+        <options>
+          <mergeRemote>origin</mergeRemote>
+          <mergeTarget>master</mergeTarget>
+          <mergeStrategy>default</mergeStrategy>
+          <fastForwardMode>FF</fastForwardMode>
+        </options>
+      </hudson.plugins.git.extensions.impl.PreBuildMerge>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
