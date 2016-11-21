@@ -22,46 +22,30 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@1.1.3">
-    <configVersion>1</configVersion>
-    <remoteRepositories>
-      <org.spearce.jgit.transport.RemoteConfig>
-        <string>origin</string>
-        <int>5</int>
-        <string>fetch</string>
-        <string>+refs/heads/*:refs/remotes/origin/*</string>
-        <string>receivepack</string>
-        <string>git-upload-pack</string>
-        <string>uploadpack</string>
-        <string>git-upload-pack</string>
-        <string>url</string>
-        <string>git@github.com:clojure/$name$.git</string>
-        <string>tagopt</string>
-        <string></string>
-      </org.spearce.jgit.transport.RemoteConfig>
-    </remoteRepositories>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <name>origin</name>
+        <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+        <url>git@github.com:clojure/$name$.git</url>
+        <credentialsId>clojure-build</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
         <name>master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
-    <localBranch>master</localBranch>
-    <mergeOptions>
-      <mergeRemote reference="../../remoteRepositories/org.spearce.jgit.transport.RemoteConfig"/>
-      <mergeTarget>master</mergeTarget>
-    </mergeOptions>
-    <recursiveSubmodules>false</recursiveSubmodules>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <authorOrCommitter>false</authorOrCommitter>
-    <clean>false</clean>
-    <wipeOutWorkspace>true</wipeOutWorkspace>
-    <pruneBranches>false</pruneBranches>
-    <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
-    <gitTool>Default</gitTool>
     <submoduleCfg class="list"/>
-    <relativeTargetDir></relativeTargetDir>
-    <excludedRegions></excludedRegions>
-    <excludedUsers></excludedUsers>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.WipeWorkspace/>
+      <hudson.plugins.git.extensions.impl.PerBuildTag/>
+      <hudson.plugins.git.extensions.impl.LocalBranch>
+        <localBranch>master</localBranch>
+      </hudson.plugins.git.extensions.impl.LocalBranch>
+    </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -103,13 +87,13 @@
       <preBuildSteps/>
       <postBuildSteps>
         <hudson.tasks.Shell>
-          <command>git push origin master `git tag | grep -v ^hudson`</command>
+          <command>git push origin master `git tag | grep -v ^jenkins`</command>
         </hudson.tasks.Shell>
       </postBuildSteps>
       <runIfResult>success</runIfResult>
     </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
     <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
-      <releaseGoals>release:prepare release:perform -Psonatype-oss-release -Dgoals="deploy nexus-staging:release"</releaseGoals>
+      <releaseGoals>release:prepare release:perform -Psonatype-oss-release -Dgoals=&quot;deploy nexus-staging:release&quot;</releaseGoals>
       <defaultVersioningMode>specify_version</defaultVersioningMode>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
