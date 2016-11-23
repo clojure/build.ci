@@ -68,7 +68,7 @@
   <builders>
     <hudson.tasks.Maven>
       <targets>-Dclojure.version=\$CLOJURE_VERSION clean test</targets>
-      <mavenName>Maven 3.3.3</mavenName>
+      <mavenName>Maven 3.2.5</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
       <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>

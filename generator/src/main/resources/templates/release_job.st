@@ -72,7 +72,7 @@
     <artifactId>$name$</artifactId>
   </rootModule>
   <goals>--fail-at-end clean deploy</goals>
-  <mavenName>Maven 3.3.3</mavenName>
+  <mavenName>Maven 3.2.5</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
