@@ -114,7 +114,7 @@
       <scmUserEnvVar></scmUserEnvVar>
       <scmPasswordEnvVar></scmPasswordEnvVar>
       <releaseEnvVar>IS_M2RELEASEBUILD</releaseEnvVar>
-      <releaseGoals>release:prepare release:perform -Psonatype-oss-release -Dgoals=&quot;deploy nexus-staging:release&quot;</releaseGoals>
+      <releaseGoals>-DskipStaging=true release:prepare release:perform</releaseGoals>
       <dryRunGoals>-Dresume=false -DdryRun=true release:prepare</dryRunGoals>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
