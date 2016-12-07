@@ -21,7 +21,7 @@
    :jdk-version "1.7"}
   {:name "Oracle JDK 1.8"
    :enabled true
-   :home "/usr/java/jdk1.8.0_05"
+   :home "/usr/java/jdk1.8.0_111"
    :jdk-version "1.8"}
   {:name "IBM JDK 1.6"
    :enabled true
