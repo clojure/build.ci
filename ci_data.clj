@@ -73,7 +73,7 @@
   {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.4.0"}
   {:name "java.jmx"           :owners ["nickbailey"] :min-clojure "1.4.0"}
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"] :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
-  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.4.0"}
+  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "test.check"         :owners ["reiddraper" "gfredericks"] :min-clojure "1.7.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
