@@ -114,7 +114,7 @@
       <scmUserEnvVar></scmUserEnvVar>
       <scmPasswordEnvVar></scmPasswordEnvVar>
       <releaseEnvVar>IS_M2RELEASEBUILD</releaseEnvVar>
-      <releaseGoals>-DskipStaging=true release:prepare release:perform</releaseGoals>
+      <releaseGoals>-DskipStaging=true -Psign release:prepare release:perform</releaseGoals>
       <dryRunGoals>-Dresume=false -DdryRun=true release:prepare</dryRunGoals>
       <selectCustomScmCommentPrefix>false</selectCustomScmCommentPrefix>
       <selectAppendHudsonUsername>false</selectAppendHudsonUsername>
