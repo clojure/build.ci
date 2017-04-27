@@ -6,7 +6,7 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0-alpha15" "1.9.0-master-SNAPSHOT"]
+ ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0-alpha16" "1.9.0-master-SNAPSHOT"]
 
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
@@ -77,7 +77,7 @@
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"] :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0-alpha15"}
+  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0-alpha16"}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.5.1"}
