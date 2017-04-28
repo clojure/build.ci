@@ -102,10 +102,7 @@
   </publishers>
   <buildWrappers>
     <hudson.plugins.m2extrasteps.M2ExtraStepsWrapper plugin="m2-extra-steps@1.1.3">
-      <preBuildSteps>
-        $prescripts:{ script |<hudson.tasks.Shell><command>$script$</command></hudson.tasks.Shell>};
-        separator="\n"$
-      </preBuildSteps>
+      <preBuildSteps/>
       <postBuildSteps>
         <hudson.tasks.Shell>
           <command>git push origin master `git tag | grep -v ^jenkins`</command>
