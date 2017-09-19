@@ -24,13 +24,17 @@
    :home "/usr/java/jdk1.8.0_111"
    :jdk-version "1.8"}
   {:name "IBM JDK 1.6"
-   :enabled true
+   :enabled false
    :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"
    :jdk-version "1.6"}
   {:name "IBM JDK 1.7"
    :enabled false
    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
    :jdk-version "1.7"}
+  {:name "Open JDK 9 with Eclipse Open J9"
+   :enabled true
+   :home "/usr/lib/jvm/jdk-9+181"
+   :jdk-version "1.9"}
   {:name "OpenJDK 1.6"
    :enabled true
    :home "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.40.x86_64"
