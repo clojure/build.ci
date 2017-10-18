@@ -73,7 +73,7 @@
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0" :exclude-jdk #{"IBM JDK 1.6"}}
   {:name "data.zip"           :owners []}
-  {:name "java.classpath"     :owners ["stuartsierra"]}
+  {:name "java.classpath"     :owners ["stuartsierra"] :exclude-jdk #{"Open JDK 9 with Eclipse Open J9"}}
   {:name "java.data"          :owners ["cosminstejerean"]}
   {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0" :jdk-version "1.7"}
   {:name "java.jmx"           :owners ["nickbailey"] :min-clojure "1.4.0"}
