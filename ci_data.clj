@@ -6,7 +6,7 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0-RC2" "1.9.0-master-SNAPSHOT"]
+ ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0-master-SNAPSHOT"]
 
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
@@ -59,7 +59,7 @@
   {:name "core.cache"         :owners ["fogus" "ambrosebs"] :min-clojure "1.3.0"}
   {:name "core.contracts"     :owners ["fogus"]}
   {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1"}
-  {:name "core.specs.alpha"   :owners ["alexmiller"] :min-clojure "1.9.0-RC2"}
+  {:name "core.specs.alpha"   :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}
                               :jdk-version "1.7"}
   {:name "data.avl"           :owners ["michalmarczyk"] :min-clojure "1.5.1"}
@@ -80,7 +80,7 @@
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"] :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0-RC2" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
+  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.5.1"}
