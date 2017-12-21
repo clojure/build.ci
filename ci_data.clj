@@ -87,7 +87,7 @@
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"]}
-  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
+  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6" "Oracle JDK 1.7"}}
   {:name "tools.logging"      :owners ["ataggart"] :min-clojure "1.3.0"}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.7.0"}
