@@ -56,7 +56,7 @@
   {:name "core.logic"         :owners ["davidnolen"] :min-clojure "1.3.0"}
   {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.4.0"}
   {:name "core.unify"         :owners ["fogus"]}
-  {:name "core.memoize"       :owners ["fogus"] :min-clojure "1.3.0"}
+  {:name "core.memoize"       :owners ["seancorfield"] :min-clojure "1.3.0"}
   {:name "core.cache"         :owners ["seancorfield"] :min-clojure "1.3.0"}
   {:name "core.contracts"     :owners ["fogus"]}
   {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1"}
