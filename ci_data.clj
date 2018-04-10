@@ -71,7 +71,7 @@
   {:name "data.generators"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
-  {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
+  {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"] :min-clojure "1.5.0"}
   {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0" :exclude-jdk #{"IBM JDK 1.6"}}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"] :exclude-jdk #{"Open JDK 9 with Eclipse Open J9"}}
