@@ -15,26 +15,10 @@
    :enabled false
    :home "/usr/java/jdk1.6.0_20"
    :jdk-version "1.6"}
-  {:name "Oracle JDK 1.7"
-   :enabled false
-   :home "/usr/java/jdk1.7.0-b147"
-   :jdk-version "1.7"}
-  {:name "Oracle JDK 1.8"
-   :enabled true
-   :home "/usr/java/jdk1.8.0_111"
-   :jdk-version "1.8"}
   {:name "IBM JDK 1.6"
    :enabled false
    :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"
    :jdk-version "1.6"}
-  {:name "IBM JDK 1.7"
-   :enabled false
-   :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
-   :jdk-version "1.7"}
-  {:name "Open JDK 9 with Eclipse Open J9"
-   :enabled false
-   :home "/usr/lib/jvm/jdk-9+181"
-   :jdk-version "1.9"}
   {:name "OpenJDK 1.6"
    :enabled false
    :home "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.40.x86_64"
@@ -43,7 +27,39 @@
   {:name "JRockit 1.6"
    :enabled false
    :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"
-   :jdk-version "1.6"}]
+   :jdk-version "1.6"}
+  {:name "Oracle JDK 1.7"
+   :enabled false
+   :home "/usr/java/jdk1.7.0-b147"
+   :jdk-version "1.7"}
+  {:name "IBM JDK 1.7"
+   :enabled false
+   :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
+   :jdk-version "1.7"}
+  {:name "Oracle JDK 1.8"
+   :enabled true
+   :home "/usr/java/jdk1.8.0_111"
+   :jdk-version "1.8"}
+  {:name "Oracle JDK 9"
+   :enabled true
+   :home "/opt/java/sdk/oracle/jdk-9.0.4"
+   :jdk-version "1.9"}
+  {:name "OpenJDK 9"
+   :enabled true
+   :home "/opt/java/sdk/openjdk/jdk-9.0.4"
+   :jdk-version "1.9"}
+  {:name "Open JDK 9 with Eclipse Open J9"
+   :enabled false
+   :home "/usr/lib/jvm/jdk-9+181"
+   :jdk-version "1.10"}
+    {:name "Oracle JDK 10"
+   :enabled true
+   :home "/opt/java/sdk/oracle/jdk-10.0.1"
+   :jdk-version "1.10"}
+  {:name "OpenJDK 10"
+   :enabled true
+   :home "/opt/java/sdk/openjdk/jdk-10.0.1"
+   :jdk-version "1.10"}]
 
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
