@@ -6,17 +6,17 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0-alpha4" "1.10.0-master-SNAPSHOT"]
+ ["1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0-alpha5" "1.10.0-master-SNAPSHOT"]
 
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
  :jdks
  [{:name "Sun JDK 1.6"
-   :enabled true
+   :enabled false
    :home "/usr/java/jdk1.6.0_20"
    :jdk-version "1.6"}
   {:name "Oracle JDK 1.7"
-   :enabled true
+   :enabled false
    :home "/usr/java/jdk1.7.0-b147"
    :jdk-version "1.7"}
   {:name "Oracle JDK 1.8"
@@ -32,11 +32,11 @@
    :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
    :jdk-version "1.7"}
   {:name "Open JDK 9 with Eclipse Open J9"
-   :enabled true
+   :enabled false
    :home "/usr/lib/jvm/jdk-9+181"
    :jdk-version "1.9"}
   {:name "OpenJDK 1.6"
-   :enabled true
+   :enabled false
    :home "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.40.x86_64"
    :jdk-version "1.6"}
   ;; Some Clojure language tests fail on JRockit
@@ -50,8 +50,7 @@
  :contribs
  [{:name "algo.monads"        :owners ["konradhinsen"]}
   {:name "algo.generic"       :owners ["konradhinsen"] :min-clojure "1.3.0"}
-  {:name "core.async"         :owners ["alexmiller","stuart.halloway"] :min-clojure "1.7.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}
-                              :jdk-version "1.7"}
+  {:name "core.async"         :owners ["alexmiller","stuart.halloway"] :min-clojure "1.7.0"}
   {:name "core.incubator"     :owners []}
   {:name "core.logic"         :owners ["davidnolen"] :min-clojure "1.3.0"}
   {:name "core.match"         :owners ["davidnolen"] :min-clojure "1.4.0"}
@@ -61,35 +60,34 @@
   {:name "core.contracts"     :owners ["fogus"]}
   {:name "core.rrb-vector"    :owners ["michalmarczyk"] :min-clojure "1.5.1"}
   {:name "core.specs.alpha"   :owners ["alexmiller"] :min-clojure "1.9.0"}
-  {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}
-                              :jdk-version "1.7"}
+  {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.6.0"}
   {:name "data.avl"           :owners ["michalmarczyk"] :min-clojure "1.5.1"}
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.7.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
   {:name "data.finger-tree"   :owners ["Chouser"] :min-clojure "1.4.0"}
   {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.5.1"}
   {:name "data.generators"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
-  {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
+  {:name "data.int-map"       :owners ["ztellman"] :min-clojure "1.6.0"}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.3.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"] :min-clojure "1.5.1"}
-  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0" :exclude-jdk #{"IBM JDK 1.6"}}
+  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"] :exclude-jdk #{"Open JDK 9 with Eclipse Open J9"}}
   {:name "java.data"          :owners ["cosminstejerean"]}
-  {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0" :jdk-version "1.7"}
+  {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0"}
   {:name "java.jmx"           :owners ["nickbailey"] :min-clojure "1.4.0"}
-  {:name "jvm.tools.analyzer" :owners ["ambrosebs"] :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
-  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
+  {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
+  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"]}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6"}}
+  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.4.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"]}
-  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6" "Oracle JDK 1.7"} :jdk-version "1.8"}
-  {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.8.0" :exclude-jdk #{"Sun JDK 1.6" "IBM JDK 1.6" "OpenJDK 1.6" "Oracle JDK 1.7"} :jdk-version "1.8"}
+  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0"}
+  {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.8.0"}
   {:name "tools.logging"      :owners ["ataggart"] :min-clojure "1.3.0"}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.7.0"}
