@@ -27,7 +27,7 @@
   (map :name (active-jdks)))
 
 (defn default-jdk [jdk-version]
-  (first (filter #(= (or jdk-version "1.7")
+  (first (filter #(= (or jdk-version "1.8")
                      (:jdk-version %))
                  (active-jdks))))
 
