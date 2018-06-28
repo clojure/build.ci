@@ -41,7 +41,7 @@
    :home "/usr/java/jdk1.8.0_111"
    :jdk-version "1.8"}
   {:name "Oracle JDK 9"
-   :enabled false
+   :enabled true
    :home "/opt/java/sdk/oracle/jdk-9.0.4"
    :jdk-version "1.9"}
   {:name "OpenJDK 9"
