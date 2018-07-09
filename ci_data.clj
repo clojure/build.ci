@@ -59,7 +59,15 @@
   {:name "OpenJDK 10"
    :enabled true
    :home "/opt/java/sdk/openjdk/jdk-10.0.1"
-   :jdk-version "1.10"}]
+   :jdk-version "1.10"}
+  {:name "Oracle 11 EA"
+   :enabled true
+   :home "/opt/java/sdk/oracle/jdk-11"
+   :jdk-version "11-ea"}
+  {:name "OpenJDK 11 EA"
+   :enabled true
+   :home "/opt/java/sdk/openjdk/jdk-11"
+   :jdk-version "11-ea"}]
 
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
