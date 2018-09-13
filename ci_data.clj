@@ -101,7 +101,7 @@
   {:name "tools.analyzer"     :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"] :min-clojure "1.5.1"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"] :min-clojure "1.5.1"}
-  {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"]}
+  {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"] :min-clojure "1.8.0"}
   {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0"}
   {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.8.0"}
   {:name "tools.logging"      :owners ["ataggart"] :min-clojure "1.3.0"}
