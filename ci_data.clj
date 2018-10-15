@@ -12,24 +12,7 @@
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
  :jdks
- [{:name "Sun JDK 1.6"
-   :enabled false
-   :home "/usr/java/jdk1.6.0_20"
-   :jdk-version "1.6"}
-  {:name "IBM JDK 1.6"
-   :enabled false
-   :home "/usr/java/ibm-java-x86_64-sdk-6.0-9.2"
-   :jdk-version "1.6"}
-  {:name "OpenJDK 1.6"
-   :enabled false
-   :home "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.40.x86_64"
-   :jdk-version "1.6"}
-  ;; Some Clojure language tests fail on JRockit
-  {:name "JRockit 1.6"
-   :enabled false
-   :home "/usr/java/jrockit-jdk1.6.0_24-R28.1.3-4.0.1"
-   :jdk-version "1.6"}
-  {:name "Oracle JDK 1.7"
+ [{:name "Oracle JDK 1.7"
    :enabled false
    :home "/usr/java/jdk1.7.0-b147"
    :jdk-version "1.7"}
@@ -115,6 +98,5 @@
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
   {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.7.0"}
-;;  {:name "tools.nrepl"        :owners ["cemerick" "trptcolin"]}
   {:name "tools.reader"       :owners ["nicolamometto"]}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
