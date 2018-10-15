@@ -94,7 +94,7 @@
   {:name "data.int-map"       :owners ["ztellman"]}
   {:name "data.json"          :owners ["stuartsierra"]}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
-  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"]}
+  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"] :exclude-jdk #{"Open JDK 9 with Eclipse Open J9"}}
   {:name "java.data"          :owners ["cosminstejerean"]}
