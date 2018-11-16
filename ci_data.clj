@@ -68,6 +68,10 @@
   {:name "core.rrb-vector"    :owners ["michalmarczyk"]}
   {:name "core.specs.alpha"   :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.9.0"}
+  {:name "core.typed.runtime.jvm"   :owners ["ambrosebs"] :min-clojure "1.9.0"}
+  {:name "core.typed.analyzer.jvm"  :owners ["ambrosebs"] :min-clojure "1.9.0"}
+  {:name "core.typed.checker.jvm"   :owners ["ambrosebs"] :min-clojure "1.9.0"}
+  {:name "core.typed.annotator.jvm" :owners ["ambrosebs"] :min-clojure "1.9.0"}
   {:name "data.avl"           :owners ["michalmarczyk"]}
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.7.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
