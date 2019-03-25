@@ -98,7 +98,7 @@
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"] :min-clojure "1.8.0"}
-  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.8.0"}
+  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.8.0"}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
