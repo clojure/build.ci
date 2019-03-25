@@ -6,7 +6,7 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.11.0-master-SNAPSHOT"]
+ ["1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.10.1-beta1" "1.11.0-master-SNAPSHOT"]
  ;; old versions: "1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" 
 
  ;; Installed Java versions. If :enabled is true we will test contrib
@@ -25,11 +25,11 @@
    :home "/usr/java/jdk1.8.0_111"
    :jdk-version "1.8"}
   {:name "Oracle JDK 9"
-   :enabled true
+   :enabled false
    :home "/opt/java/sdk/oracle/jdk-9.0.4"
    :jdk-version "1.9"}
   {:name "OpenJDK 9"
-   :enabled true
+   :enabled false
    :home "/opt/java/sdk/openjdk/jdk-9.0.4"
    :jdk-version "1.9"}
   {:name "Open JDK 9 with Eclipse Open J9"
@@ -37,11 +37,11 @@
    :home "/usr/lib/jvm/jdk-9+181"
    :jdk-version "1.10"}
     {:name "Oracle JDK 10"
-   :enabled true
+   :enabled false
    :home "/opt/java/sdk/oracle/jdk-10.0.1"
    :jdk-version "1.10"}
   {:name "OpenJDK 10"
-   :enabled true
+   :enabled false
    :home "/opt/java/sdk/openjdk/jdk-10.0.1"
    :jdk-version "1.10"}
   {:name "Oracle 11 EA"
@@ -83,7 +83,7 @@
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
   {:name "data.zip"           :owners []}
-  {:name "java.classpath"     :owners ["stuartsierra"] :exclude-jdk #{"Open JDK 9 with Eclipse Open J9"}}
+  {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean"]}
   {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0"}
   {:name "java.jmx"           :owners ["nickbailey"]}
