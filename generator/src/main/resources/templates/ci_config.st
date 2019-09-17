@@ -1,10 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors>
     <string>jenkins.security.RekeySecretAdminMonitor</string>
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
+    <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
+    <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.386</version>
+  <version>2.195</version>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -18,14 +20,14 @@
     <permission>hudson.model.Item.Read:anonymous</permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-  <disableSignup>true</disableSignup>
-  <enableCaptcha>false</enableCaptcha>
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class= "jenkins.model.ProjectNamingStrategy\$DefaultProjectNamingStrategy"/>
   <workspaceDir>\${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>\${ITEM_ROOTDIR}/builds</buildsDir>
-  <systemMessage>Clojure build server, deploying to https://oss.sonatype.org/. See http://dev.clojure.org/display/doc/Maven+Settings+and+Repositories on the Clojure Wiki for more information.</systemMessage>
+  <systemMessage>Clojure build server, deploying to https://oss.sonatype.org/.</systemMessage>
   <jdks>
     $jdks:{ jdk |<jdk>
   <name>$jdk.name$</name>
@@ -50,6 +52,7 @@
       <name>Clojure</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>clojure</string>
@@ -72,6 +75,7 @@
       <name>Contrib</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         $libs:{ name | <string>$name$</string>}; separator="\n"$
@@ -93,6 +97,7 @@
       <name>Support</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>build.ci</string>
