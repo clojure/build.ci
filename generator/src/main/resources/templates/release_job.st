@@ -102,15 +102,6 @@
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.m2extrasteps.M2ExtraStepsWrapper plugin="m2-extra-steps@1.1.3">
-      <preBuildSteps/>
-      <postBuildSteps>
-        <hudson.tasks.Shell>
-          <command>git push origin master `git tag | grep -v ^jenkins`</command>
-        </hudson.tasks.Shell>
-      </postBuildSteps>
-      <runIfResult>success</runIfResult>
-    </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
     <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper plugin="m2release@0.15.0">
       <scmUserEnvVar></scmUserEnvVar>
       <scmPasswordEnvVar></scmPasswordEnvVar>
