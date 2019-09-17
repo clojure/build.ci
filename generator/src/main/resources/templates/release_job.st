@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.14">
+<?xml version='1.1' encoding='UTF-8'?>
+<maven2-moduleset plugin="maven-plugin@3.4">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.security.AuthorizationMatrixProperty>
+      <inheritanceStrategy class="org.jenkinsci.plugins.matrixauth.inheritance.InheritParentStrategy"/>
       $owners:{ name |<permission>hudson.model.Item.Read:$name$</permission>
 <permission>hudson.model.Run.Delete:$name$</permission>
 <permission>hudson.model.Run.Update:$name$</permission>
@@ -22,7 +23,7 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.0.0-rc">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -110,7 +111,7 @@
       </postBuildSteps>
       <runIfResult>success</runIfResult>
     </hudson.plugins.m2extrasteps.M2ExtraStepsWrapper>
-    <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper plugin="m2release@0.14.0">
+    <org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper plugin="m2release@0.15.0">
       <scmUserEnvVar></scmUserEnvVar>
       <scmPasswordEnvVar></scmPasswordEnvVar>
       <releaseEnvVar>IS_M2RELEASEBUILD</releaseEnvVar>
@@ -123,11 +124,15 @@
     </org.jvnet.hudson.plugins.m2release.M2ReleaseBuildWrapper>
   </buildWrappers>
   <prebuilders/>
-  <postbuilders/>
+  <postbuilders>
+    <hudson.tasks.Shell>
+      <command>git push origin master `git tag | grep -v ^jenkins`</command>
+    </hudson.tasks.Shell>
+  </postbuilders>
   <runPostStepsIfResult>
-    <name>FAILURE</name>
-    <ordinal>2</ordinal>
-    <color>RED</color>
+    <name>SUCCESS</name>
+    <ordinal>0</ordinal>
+    <color>BLUE</color>
     <completeBuild>true</completeBuild>
   </runPostStepsIfResult>
 </maven2-moduleset>
