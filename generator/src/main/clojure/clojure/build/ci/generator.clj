@@ -95,11 +95,13 @@
                        (update-exclude-jdk))))
 
 (defn write-release-job [lib]
+  (println "Writing release job" (job-dir (:name lib)))
   (.mkdirs (job-dir (:name lib)))
   (spit (job-config-file (:name lib))
         (release-job-config lib)))
 
 (defn write-matrix-job [lib]
+  (println "Writing matrix job" (job-dir (:name lib)))
   (let [jobname (str (:name lib) "-test-matrix")]
     (.mkdirs (job-dir jobname))
     (spit (job-config-file jobname)
@@ -110,6 +112,7 @@
    {:libs (map :name (contrib-libs))}))
 
 (defn write-rebuild-libs-job []
+  (println "Writing release-all-libraries job" (job-config-file "rebuild-all-libraries"))
   (let [jobfile (job-config-file "rebuild-all-libraries")]
     (io/make-parents jobfile)
     (spit jobfile (rebuild-libs-config))))
@@ -125,6 +128,7 @@
                     :jdks (jdks)}))
 
 (defn write-ci-config []
+  (println "Write config file" (ci-config-file))
   (io/make-parents (ci-config-file))
   (spit (ci-config-file) (ci-config)))
 
