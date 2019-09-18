@@ -52,7 +52,7 @@
       <name>Clojure</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
+      <properties class="hudson.model.View\$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>clojure</string>
@@ -75,7 +75,7 @@
       <name>Contrib</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
+      <properties class="hudson.model.View\$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         $libs:{ name | <string>$name$</string>}; separator="\n"$
@@ -97,7 +97,7 @@
       <name>Support</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
+      <properties class="hudson.model.View\$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>build.ci</string>
