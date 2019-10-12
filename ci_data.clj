@@ -84,7 +84,7 @@
   {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"]}
-  {:name "java.data"          :owners ["cosminstejerean"]}
+  {:name "java.data"          :owners ["cosminstejerean" "seancorfield"]}
   {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0"}
   {:name "java.jmx"           :owners ["nickbailey"]}
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
