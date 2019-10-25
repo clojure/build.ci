@@ -65,7 +65,7 @@
   {:name "core.memoize"       :owners ["seancorfield"]}
   {:name "core.cache"         :owners ["seancorfield"]}
   {:name "core.contracts"     :owners ["fogus"]}
-  {:name "core.rrb-vector"    :owners ["michalmarczyk"]}
+  {:name "core.rrb-vector"    :owners ["michalmarczyk" "afingerhut"]}
   {:name "core.specs.alpha"   :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "core.typed"         :owners ["ambrosebs"] :min-clojure "1.9.0"}
   {:name "core.typed.runtime.jvm"   :owners ["ambrosebs"] :min-clojure "1.9.0"}
