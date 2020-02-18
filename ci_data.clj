@@ -6,8 +6,8 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.6.0" "1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.10.1" "1.11.0-master-SNAPSHOT"]
- ;; old versions: "1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" 
+ ["1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.10.1" "1.11.0-master-SNAPSHOT"]
+ ;; old versions: "1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0"
 
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
@@ -76,7 +76,7 @@
   {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.7.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
   {:name "data.finger-tree"   :owners ["Chouser"]}
-  {:name "data.fressian"      :owners ["stuart.halloway"]}
+  {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.7.0"}
   {:name "data.generators"    :owners ["stuart.halloway"]}
   {:name "data.int-map"       :owners ["ztellman"]}
   {:name "data.json"          :owners ["stuartsierra"]}
