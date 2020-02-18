@@ -93,7 +93,7 @@
   {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "spec-alpha2"        :owners ["alexmiller"] :min-clojure "1.10.0"}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
-  {:name "test.generative"    :owners ["stuart.halloway"]}
+  {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.7.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"]}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
