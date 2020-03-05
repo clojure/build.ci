@@ -6,7 +6,7 @@
  ;; The versions of Clojure against which we will test
  ;; contrib libraries
  :clojure-versions
- ["1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.10.1" "1.11.0-master-SNAPSHOT"]
+ ["1.7.0" "1.8.0" "1.9.0" "1.10.0" "1.10.1" "1.10.2-master-SNAPSHOT"]
  ;; old versions: "1.2.0" "1.2.1" "1.3.0" "1.4.0" "1.5.1" "1.6.0"
 
  ;; Installed Java versions. If :enabled is true we will test contrib
