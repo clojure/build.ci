@@ -79,7 +79,7 @@
   {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.7.0"}
   {:name "data.generators"    :owners ["stuart.halloway"]}
   {:name "data.int-map"       :owners ["ztellman"]}
-  {:name "data.json"          :owners ["stuartsierra"]}
+  {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.8.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
   {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
   {:name "data.zip"           :owners []}
