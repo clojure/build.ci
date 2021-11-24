@@ -12,46 +12,19 @@
  ;; Installed Java versions. If :enabled is true we will test contrib
  ;; libraries with that Java version.
  :jdks
- [{:name "Oracle JDK 1.7"
-   :enabled false
-   :home "/usr/java/jdk1.7.0-b147"
-   :jdk-version "1.7"}
-  {:name "IBM JDK 1.7"
-   :enabled false
-   :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"
-   :jdk-version "1.7"}
-  {:name "Oracle JDK 1.8"
-   :enabled true
-   :home "/usr/java/jdk1.8.0_111"
-   :jdk-version "1.8"}
-  {:name "Oracle JDK 9"
-   :enabled false
-   :home "/opt/java/sdk/oracle/jdk-9.0.4"
-   :jdk-version "1.9"}
-  {:name "OpenJDK 9"
-   :enabled false
-   :home "/opt/java/sdk/openjdk/jdk-9.0.4"
-   :jdk-version "1.9"}
-  {:name "Open JDK 9 with Eclipse Open J9"
-   :enabled false
-   :home "/usr/lib/jvm/jdk-9+181"
-   :jdk-version "1.10"}
-    {:name "Oracle JDK 10"
-   :enabled false
-   :home "/opt/java/sdk/oracle/jdk-10.0.1"
-   :jdk-version "1.10"}
-  {:name "OpenJDK 10"
-   :enabled false
-   :home "/opt/java/sdk/openjdk/jdk-10.0.1"
-   :jdk-version "1.10"}
-  {:name "Oracle 11 EA"
-   :enabled true
-   :home "/opt/java/sdk/oracle/jdk-11"
-   :jdk-version "11-ea"}
-  {:name "OpenJDK 11 EA"
-   :enabled true
-   :home "/opt/java/sdk/openjdk/jdk-11"
-   :jdk-version "11-ea"}]
+ [{:name "Oracle JDK 1.7"   :jdk-version "1.7"   :enabled false :home "/usr/java/jdk1.7.0-b147"}
+  {:name "IBM JDK 1.7"      :jdk-version "1.7"   :enabled false :home "/usr/java/ibm-java-x86_64-sdk-7.0-0.0"}
+  {:name "Oracle JDK 1.8"   :jdk-version "1.8"   :enabled true  :home "/usr/java/jdk1.8.0_111"}
+  {:name "Adoptium 8"       :jdk-version "1.8"   :enabled true  :home "/opt/java/sdk/adoptium/jdk8u312-b07"}
+  {:name "Oracle JDK 9"     :jdk-version "9"     :enabled false :home "/opt/java/sdk/oracle/jdk-9.0.4"}
+  {:name "OpenJDK 9"        :jdk-version "9"     :enabled false :home "/opt/java/sdk/openjdk/jdk-9.0.4"}
+  {:name "Eclipse J9 JDK 9" :jdk-version "9"     :enabled false :home "/usr/lib/jvm/jdk-9+181"}
+  {:name "Oracle JDK 10"    :jdk-version "10"    :enabled false :home "/opt/java/sdk/oracle/jdk-10.0.1"}
+  {:name "OpenJDK 10"       :jdk-version "10"    :enabled false :home "/opt/java/sdk/openjdk/jdk-10.0.1"}
+  {:name "Oracle 11 EA"     :jdk-version "11-ea" :enabled true  :home "/opt/java/sdk/oracle/jdk-11"}
+  {:name "OpenJDK 11 EA"    :jdk-version "11-ea" :enabled false :home "/opt/java/sdk/openjdk/jdk-11"}
+  {:name "Adoptium 11"      :jdk-version "11"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-11.0.13+8"}
+  {:name "Adoptium 17"      :jdk-version "17"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-17.0.1+12"}]
 
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
