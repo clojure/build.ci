@@ -21,7 +21,7 @@
   {:name "Eclipse J9 JDK 9" :jdk-version "9"     :enabled false :home "/usr/lib/jvm/jdk-9+181"}
   {:name "Oracle JDK 10"    :jdk-version "10"    :enabled false :home "/opt/java/sdk/oracle/jdk-10.0.1"}
   {:name "OpenJDK 10"       :jdk-version "10"    :enabled false :home "/opt/java/sdk/openjdk/jdk-10.0.1"}
-  {:name "Oracle 11 EA"     :jdk-version "11-ea" :enabled true  :home "/opt/java/sdk/oracle/jdk-11"}
+  {:name "Oracle 11 EA"     :jdk-version "11-ea" :enabled false :home "/opt/java/sdk/oracle/jdk-11"}
   {:name "OpenJDK 11 EA"    :jdk-version "11-ea" :enabled false :home "/opt/java/sdk/openjdk/jdk-11"}
   {:name "Adoptium 11"      :jdk-version "11"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-11.0.13+8"}
   {:name "Adoptium 17"      :jdk-version "17"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-17.0.1+12"}
