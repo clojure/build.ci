@@ -24,7 +24,8 @@
   {:name "Oracle 11 EA"     :jdk-version "11-ea" :enabled true  :home "/opt/java/sdk/oracle/jdk-11"}
   {:name "OpenJDK 11 EA"    :jdk-version "11-ea" :enabled false :home "/opt/java/sdk/openjdk/jdk-11"}
   {:name "Adoptium 11"      :jdk-version "11"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-11.0.13+8"}
-  {:name "Adoptium 17"      :jdk-version "17"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-17.0.1+12"}]
+  {:name "Adoptium 17"      :jdk-version "17"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-17.0.1+12"}
+  {:name "Oracle JDK 17"    :jdk-version "17"    :enabled true  :home "/opt/java/sdk/oracle/jdk-17.0.1"}]
 
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
