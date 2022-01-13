@@ -7,10 +7,10 @@
     <hudson.security.AuthorizationMatrixProperty>
       <inheritanceStrategy class="org.jenkinsci.plugins.matrixauth.inheritance.InheritParentStrategy"/>
       $owners:{ name |<permission>hudson.model.Item.Read:$name$</permission>
-<permission>hudson.model.Run.Delete:$name$</permission>
-<permission>hudson.model.Run.Update:$name$</permission>
-<permission>hudson.model.Item.Workspace:$name$</permission>
-<permission>hudson.model.Item.Build:$name$</permission>};
+<permission>USER:hudson.model.Run.Delete:$name$</permission>
+<permission>USER:hudson.model.Run.Update:$name$</permission>
+<permission>USER:hudson.model.Item.Workspace:$name$</permission>
+<permission>USER:hudson.model.Item.Build:$name$</permission>};
        separator="\n"$
     </hudson.security.AuthorizationMatrixProperty>
     <jenkins.model.BuildDiscarderProperty>

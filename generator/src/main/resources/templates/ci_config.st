@@ -11,13 +11,13 @@
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
-    <permission>hudson.model.Hudson.Administer:chrisredinger</permission>
-    <permission>hudson.model.Hudson.Administer:richhickey</permission>
-    <permission>hudson.model.Hudson.Administer:stuart.halloway</permission>
-    <permission>hudson.model.Hudson.Administer:stuartsierra</permission>
-    <permission>hudson.model.Hudson.Administer:alexmiller</permission>
-    <permission>hudson.model.Hudson.Read:anonymous</permission>
-    <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>USER:hudson.model.Hudson.Administer:chrisredinger</permission>
+    <permission>USER:hudson.model.Hudson.Administer:richhickey</permission>
+    <permission>USER:hudson.model.Hudson.Administer:stuart.halloway</permission>
+    <permission>USER:hudson.model.Hudson.Administer:stuartsierra</permission>
+    <permission>USER:hudson.model.Hudson.Administer:alexmiller</permission>
+    <permission>USER:hudson.model.Hudson.Read:anonymous</permission>
+    <permission>USER:hudson.model.Item.Read:anonymous</permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>true</disableSignup>
