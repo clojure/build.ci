@@ -65,14 +65,14 @@
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0"}
-  {:name "spec-alpha2"        :owners ["alexmiller"] :min-clojure "1.10.0"}
+  {:name "spec-alpha2"        :owners ["alexmiller"] :min-clojure "1.10.3"}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.7.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"]}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"] :min-clojure "1.8.0"}
-  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.9.0"}
+  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.10.3"}
   {:name "tools.deps.graph"   :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.logging"      :owners ["ataggart"]}
