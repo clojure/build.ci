@@ -47,27 +47,27 @@
   ;{:name "core.typed.checker.jvm"   :owners ["ambrosebs"] :min-clojure "1.9.0"}
   ;{:name "core.typed.annotator.jvm" :owners ["ambrosebs"] :min-clojure "1.9.0"}
   {:name "data.avl"           :owners ["michalmarczyk"]}
-  {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.7.0"}
+  {:name "data.codec"         :owners ["ataggart"] :min-clojure "1.8.0"}
   {:name "data.csv"           :owners ["jonasenlund"]}
   {:name "data.finger-tree"   :owners ["Chouser"]}
-  {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.7.0"}
+  {:name "data.fressian"      :owners ["stuart.halloway"] :min-clojure "1.8.0"}
   {:name "data.generators"    :owners ["stuart.halloway"]}
   {:name "data.int-map"       :owners ["ztellman"]}
   {:name "data.json"          :owners ["stuartsierra"] :min-clojure "1.9.0"}
   {:name "data.priority-map"  :owners ["markengelberg" "seancorfield"]}
-  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.7.0"}
+  {:name "data.xml"           :owners ["ryansenior" "hhochleitner"] :min-clojure "1.8.0"}
   {:name "data.zip"           :owners []}
   {:name "java.classpath"     :owners ["stuartsierra"]}
   {:name "java.data"          :owners ["cosminstejerean" "seancorfield"]}
-  {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.7.0"}
+  {:name "java.jdbc"          :owners ["seancorfield"] :min-clojure "1.8.0"}
   {:name "java.jmx"           :owners ["nickbailey"]}
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
-  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.7.0"}
+  {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.8.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
   {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0"}
   {:name "spec-alpha2"        :owners ["alexmiller"] :min-clojure "1.10.3"}
-  {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.7.0"}
-  {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.7.0"}
+  {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.8.0"}
+  {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.8.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"]}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
@@ -77,6 +77,6 @@
   {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.logging"      :owners ["ataggart"]}
   {:name "tools.macro"        :owners ["konradhinsen"]}
-  {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.7.0"}
+  {:name "tools.namespace"    :owners ["stuartsierra"] :min-clojure "1.8.0"}
   {:name "tools.reader"       :owners ["nicolamometto"]}
   {:name "tools.trace"        :owners ["lucprefontaine"]}]}
