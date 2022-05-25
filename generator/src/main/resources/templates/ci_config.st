@@ -16,6 +16,7 @@
     <permission>USER:hudson.model.Hudson.Administer:stuart.halloway</permission>
     <permission>USER:hudson.model.Hudson.Administer:stuartsierra</permission>
     <permission>USER:hudson.model.Hudson.Administer:alexmiller</permission>
+    <permission>USER:hudson.model.Hudson.Administer:fogus</permission>
     <permission>USER:hudson.model.Hudson.Read:anonymous</permission>
     <permission>USER:hudson.model.Item.Read:anonymous</permission>
   </authorizationStrategy>
