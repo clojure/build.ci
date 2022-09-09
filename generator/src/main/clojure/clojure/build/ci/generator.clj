@@ -26,10 +26,12 @@
 (defn jdk-names []
   (map :name (active-jdks)))
 
+(defn jdk-default-name [] (:jdk-default (input-data)))
+
 (defn default-jdk [jdk-version]
-  (first (filter #(= (or jdk-version "1.8")
-                     (:jdk-version %))
-                 (active-jdks))))
+  (if jdk-version
+    (first (filter #(= jdk-version (:jdk-version %)) (active-jdks)))
+    (first (filter #(= (jdk-default-name) (:name %)) (active-jdks)))))
 
 (defn active-clojures []
   (:clojure-versions (input-data)))

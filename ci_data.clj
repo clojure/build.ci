@@ -27,6 +27,10 @@
   {:name "Adoptium 17"      :jdk-version "17"    :enabled true  :home "/opt/java/sdk/adoptium/jdk-17.0.1+12"}
   {:name "Oracle JDK 17"    :jdk-version "17"    :enabled true  :home "/opt/java/sdk/oracle/jdk-17.0.1"}]
 
+ ;; JDK runtime version used when building
+ ;; (the build.poms parent pom sets source/target version for compilation)
+ :jdk-default "Adoptium 11"
+
  ;; The contrib libraries. :owners are Hudson usernames of people with
  ;; permission to build and release each library.
  :contribs
