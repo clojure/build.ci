@@ -74,6 +74,7 @@
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.8.0"}
   {:name "tools.analyzer"     :owners ["nicolamometto"]}
   {:name "tools.analyzer.jvm" :owners ["nicolamometto"]}
+  {:name "tools.build"        :owners ["puredanger"] :min-clojure "1.11.1"}
   {:name "tools.emitter.jvm"  :owners ["nicolamometto"]}
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"] :min-clojure "1.8.0"}
   {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.10.3"}
