@@ -36,7 +36,7 @@
  :contribs
  [{:name "algo.monads"        :owners ["konradhinsen"]}
   {:name "algo.generic"       :owners ["konradhinsen"]}
-  {:name "core.async"         :owners ["alexmiller","stuart.halloway"] :min-clojure "1.8.0"}
+  {:name "core.async"         :owners ["alexmiller","stuart.halloway"] :min-clojure "1.10.3"}
   {:name "core.logic"         :owners ["davidnolen"]}
   {:name "core.match"         :owners ["davidnolen"]}
   {:name "core.unify"         :owners ["fogus"]}
