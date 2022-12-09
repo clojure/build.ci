@@ -35,7 +35,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>master</name>
+        <name>$branch$</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -44,12 +44,12 @@
       <hudson.plugins.git.extensions.impl.WipeWorkspace/>
       <hudson.plugins.git.extensions.impl.PerBuildTag/>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>master</localBranch>
+        <localBranch>$branch$</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
       <hudson.plugins.git.extensions.impl.PreBuildMerge>
         <options>
           <mergeRemote>origin</mergeRemote>
-          <mergeTarget>master</mergeTarget>
+          <mergeTarget>$branch$</mergeTarget>
           <mergeStrategy>default</mergeStrategy>
           <fastForwardMode>FF</fastForwardMode>
         </options>
@@ -117,7 +117,7 @@
   <prebuilders/>
   <postbuilders>
     <hudson.tasks.Shell>
-      <command>git push origin master `git tag | grep -v ^jenkins`</command>
+      <command>git push origin $branch$ `git tag | grep -v ^jenkins`</command>
     </hudson.tasks.Shell>
   </postbuilders>
   <runPostStepsIfResult>
