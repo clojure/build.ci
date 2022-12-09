@@ -67,7 +67,8 @@
               (map #(str (:name %) "-test-matrix") (contrib-libs))))
 
 (defn release-job-defaults [{:keys (jdk-version)}]
-  {:jdk (:name (default-jdk jdk-version))})
+  {:jdk (:name (default-jdk jdk-version))
+   :branch "master"})
 
 (defn release-job-config [lib]
   (render-template "release_job"
@@ -75,7 +76,8 @@
 
 (defn matrix-job-defaults []
   {:jdks (jdk-names)
-   :clojures (active-clojures)})
+   :clojures (active-clojures)
+   :branch "master"})
 
 (defn update-min-clojure [lib]
   (if-let [version (:min-clojure lib)]
