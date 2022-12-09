@@ -79,7 +79,7 @@
   {:name "tools.cli"          :owners ["garethjones" "sungpae" "seancorfield"] :min-clojure "1.8.0"}
 ;;  {:name "tools.deps.alpha"   :owners ["puredanger"] :min-clojure "1.10.3"}   ;; archived
   {:name "tools.deps"         :owners ["puredanger"] :min-clojure "1.10.3"}
-  {:name "tools.deps.cli"     :owners ["puredanger"] :min-clojure "1.11.1"}
+  {:name "tools.deps.cli"     :owners ["puredanger"] :min-clojure "1.11.1" :branch "main"}
   {:name "tools.deps.graph"   :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.gitlibs"      :owners ["puredanger"] :min-clojure "1.9.0"}
   {:name "tools.logging"      :owners ["ataggart"]}
