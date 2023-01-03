@@ -68,7 +68,7 @@
   {:name "jvm.tools.analyzer" :owners ["ambrosebs"]}
   {:name "math.combinatorics" :owners ["markengelberg" "seancorfield"] :min-clojure "1.8.0"}
   {:name "math.numeric-tower" :owners ["markengelberg" "seancorfield"]}
-  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.9.0"}
+  {:name "spec.alpha"         :owners ["alexmiller"] :min-clojure "1.10.3"}
   {:name "spec-alpha2"        :owners ["alexmiller"] :min-clojure "1.10.3"}
   {:name "test.check"         :owners ["gfredericks"] :min-clojure "1.8.0"}
   {:name "test.generative"    :owners ["stuart.halloway"] :min-clojure "1.8.0"}
