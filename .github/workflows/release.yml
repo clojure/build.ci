@@ -7,10 +7,12 @@ on:
         description: "Version to release"
         required: true
         default: "X.Y.Z"
+        type: string
       snapshotVersion:
         description: "Snapshot version after release"
         required: true
         default: "X.Y.Z-SNAPSHOT"
+        type: string
 
 jobs:
   build:
