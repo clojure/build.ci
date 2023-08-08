@@ -1,0 +1,72 @@
+name: Build Contrib API Docs
+
+on:
+  workflow_call:
+    inputs:
+      project:
+        description: "Source Github repo to build docs for"
+        required: true
+        default: "clojure/data.fressian"
+        type: string
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: 8
+        distribution: 'temurin'
+
+    - name: Set up Clojure
+      uses: DeLaGuardo/setup-clojure@11.0
+      with:
+          cli: 'latest'
+
+    - name: Cache clojure dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.m2/repository
+          ~/.gitlibs
+        key: cljdeps-${{ hashFiles('deps.edn') }}
+        restore-keys: cljdeps-
+
+    - name: Clone contrib api repo
+      uses: actions/checkout@v3
+      with:
+        repository: clojure/contrib-api-doc
+        path: contrib-api-doc
+        fetch-depth: 0
+
+    - name: Clone repo to doc
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.project }}
+        path: contrib-api-doc/repo
+        fetch-depth: 0
+
+    - name: Clone repo to doc gh-pages branch
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.project }}
+        path: contrib-repo
+        ref: 'gh-pages'
+        fetch-depth: 0
+
+    - name: Call contrib-api-doc build.sh
+      run:  |
+        bash ./contrib-api-doc/build.sh ${{ inputs.project }}
+
+    - name: Commit and push gh-pages branch
+      run: |
+        cd contrib-repo
+        cp -r ../contrib-api-doc/repo-docs/* .
+        git config --global user.name clojure-build
+        git config --global user.email "clojure-build@users.noreply.github.com"
+        git add -u -v
+        git commit -m "Autodoc commit"
+        git push origin gh-pages
