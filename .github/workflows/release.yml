@@ -41,16 +41,16 @@ jobs:
         gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
         gpg-passphrase: GPG_PASSPHRASE
     - name: Publish to Maven OSS Server
+      if: ${{ inputs.centralDeployServer == 'oss' }}
       run: mvn -ntp -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.snapshotVersion }} -DskipStaging=true -Psign -Dmaven.test.skip=true release:prepare release:perform
       env:
-        if: ${{ inputs.centralDeployServer == 'oss' }}
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
         GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
     - name: Publish to Maven S01 Server
+      if: ${{ inputs.centralDeployServer == 's01' }}
       run: mvn -ntp -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.snapshotVersion }} -DskipStaging=true -Psign -Dmaven.test.skip=true release:prepare release:perform
       env:
-        if: ${{ inputs.centralDeployServer == 's01' }}
         MAVEN_USERNAME: ${{ secrets.S01RH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.S01RH_PASSWORD }}
         GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
