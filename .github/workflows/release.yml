@@ -13,6 +13,11 @@ on:
         required: true
         default: "X.Y.Z-SNAPSHOT"
         type: string
+      centralDeployServer:
+        description: "Specify maven deployment server."
+        required: false
+        default: "oss"
+        type: string
 
 jobs:
   build:
@@ -35,11 +40,19 @@ jobs:
         server-password: MAVEN_PASSWORD
         gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
         gpg-passphrase: GPG_PASSPHRASE
-    - name: Publish to Maven
+    - name: Publish to Maven OSS Server
       run: mvn -ntp -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.snapshotVersion }} -DskipStaging=true -Psign -Dmaven.test.skip=true release:prepare release:perform
       env:
+        if: ${{ inputs.centralDeployServer == 'oss' }}
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+    - name: Publish to Maven S01 Server
+      run: mvn -ntp -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.snapshotVersion }} -DskipStaging=true -Psign -Dmaven.test.skip=true release:prepare release:perform
+      env:
+        if: ${{ inputs.centralDeployServer == 's01' }}
+        MAVEN_USERNAME: ${{ secrets.S01RH_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.S01RH_PASSWORD }}
         GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
     - name: Tag
       run: |
