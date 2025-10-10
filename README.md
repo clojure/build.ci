@@ -5,5 +5,3 @@ This repository contains scripts and utilities for managing continuous integrati
 
 It also contains backups of configuration files for continuous integration.
 
-http://build.clojure.org/ is Clojure's continous integration server.
-
