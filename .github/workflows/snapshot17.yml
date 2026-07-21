@@ -1,0 +1,28 @@
+name: Snapshot on demand
+
+on: [workflow_call]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out
+      uses: actions/checkout@v6
+    - name: Set Github identity
+      run: |
+        git config --global user.name clojure-build
+        git config --global user.email "clojure-buildusers.noreply.github.com"
+    - name: Set up Java
+      uses: actions/setup-java@v5
+      with:
+        java-version: 17
+        distribution: 'temurin'
+        cache: 'maven'
+        server-id: central-snapshot
+        server-username: MAVEN_USERNAME
+        server-password: MAVEN_PASSWORD
+    - name: Publish to Maven
+      run: mvn -ntp -B --fail-at-end -Dmaven.test.skip=true clean deploy
+      env:
+        MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
