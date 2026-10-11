@@ -1,0 +1,7 @@
+[
+    {
+        "path": ".github/workflows/release17w.yml",
+        "policy": "EmailPolicy",
+        "justification": "not a nubank project"
+    }
+]
