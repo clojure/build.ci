@@ -40,6 +40,7 @@ jobs:
         server-password: MAVEN_PASSWORD
         gpg-private-key: ${{ secrets.CENTRAL_GPG_SECRET_KEY }}
         gpg-passphrase: GPG_PASSPHRASE
+    - run: ./mvnw -B verify
     - name: Publish to Maven OSS Server
       run: mvn -ntp -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.snapshotVersion }} -DskipStaging=true -Psign -Dmaven.test.skip=true release:prepare release:perform
       env:
